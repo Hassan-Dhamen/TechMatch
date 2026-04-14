@@ -726,3 +726,12 @@ text-decoration:none;
 color:#000;
 font-weight:bold;
 }
+.btn-nav-primary {
+  background: var(--black);
+  color: var(--white);
+  border: none;
+}
+
+.btn-nav-primary:hover {
+  background: var(--gray-800);
+}
