@@ -3,22 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Products - TechMatch</title>
-
-  <link rel="stylesheet" href="../css/product.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>Product Details - TechMatch</title>
+  <link rel="stylesheet" href="../css/index.css" />
+<link rel="stylesheet" href="../css/product.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <nav class="navbar">
       <a href="../index.html" class="logo">Tech<span>Match</span></a>
-
       <ul class="nav-links">
         <li><a href="../index.html">Home</a></li>
         <li><a href="product.html">Products</a></li>
@@ -26,7 +20,6 @@
         <li><a href="cart.html">Cart</a></li>
         <li><a href="login.html">Login</a></li>
       </ul>
-
       <div class="nav-actions">
         <a href="login.html" class="btn-nav btn-nav-outline">Sign In</a>
         <a href="cart.html" class="cart-icon" aria-label="Shopping cart">
@@ -37,144 +30,18 @@
     </nav>
   </header>
 
-  <section class="page-hero">
-    <div class="page-hero-content">
-      <span class="page-eyebrow"><span></span> Smart Shopping</span>
-      <h1>Explore Our <em>Products</em></h1>
-      <p>
-        Browse the latest laptops, phones, tablets, and accessories with a clean,
-        modern shopping experience.
-      </p>
+  <!-- PRODUCT DETAIL VIEW -->
+  <main class="detail-main" id="productDetailView">
+    <!-- Injected by JS -->
+  </main>
+
+  <!-- SUGGESTIONS SECTION -->
+  <section class="suggestions-section" id="suggestionsSection">
+    <div class="suggestions-inner">
+      <h2 class="suggestions-title">You Might Also Like</h2>
+      <div class="suggestions-grid" id="suggestionsGrid"></div>
     </div>
   </section>
-
-  <main class="container">
-    <aside class="sidebar">
-      <h2>Filter Products</h2>
-
-      <div class="filter-group">
-        <label for="search">Search</label>
-        <input type="text" id="search" placeholder="Search product..." />
-      </div>
-
-      <div class="filter-group">
-        <label for="category">Category</label>
-        <select id="category">
-          <option>All Categories</option>
-          <option>Phones</option>
-          <option>Laptops</option>
-          <option>Tablets</option>
-          <option>Accessories</option>
-        </select>
-      </div>
-
-      <div class="filter-group">
-        <div class="price-display">
-          <label for="price">Max Price</label>
-          <span class="price-badge">$1500</span>
-        </div>
-        <input type="range" id="price" min="100" max="1500" value="1500" />
-      </div>
-
-      <button class="clear-btn">Clear Filters</button>
-    </aside>
-
-    <section class="products-section">
-      <h2>Available Products</h2>
-
-      <div class="products-grid">
-        <article class="product-card">
-          <div class="product-img-wrap">
-            <img src="../images/products/iphone.jpg" alt="iPhone 15 Pro" />
-            <span class="product-badge phone">Phone</span>
-          </div>
-          <div class="product-info">
-            <h3>iPhone 15 Pro</h3>
-            <p class="price">$999 <small>Best Seller</small></p>
-            <div class="product-actions">
-              <button class="btn-view">View Details</button>
-              <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
-            </div>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-img-wrap">
-            <img src="../images/products/macbook.jpg" alt="MacBook Air M3" />
-            <span class="product-badge laptop">Laptop</span>
-          </div>
-          <div class="product-info">
-            <h3>MacBook Air M3</h3>
-            <p class="price">$1299 <small>New Arrival</small></p>
-            <div class="product-actions">
-              <button class="btn-view">View Details</button>
-              <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
-            </div>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-img-wrap">
-            <img src="../images/products/ipad.jpg" alt="iPad Pro" />
-            <span class="product-badge tablet">Tablet</span>
-          </div>
-          <div class="product-info">
-            <h3>iPad Pro</h3>
-            <p class="price">$899 <small>Top Rated</small></p>
-            <div class="product-actions">
-              <button class="btn-view">View Details</button>
-              <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
-            </div>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-img-wrap">
-            <img src="../images/products/airpods.jpg" alt="AirPods Pro" />
-            <span class="product-badge accessory">Accessory</span>
-          </div>
-          <div class="product-info">
-            <h3>AirPods Pro</h3>
-            <p class="price">$249 <small>Popular</small></p>
-            <div class="product-actions">
-              <button class="btn-view">View Details</button>
-              <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
-            </div>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-img-wrap">
-            <img src="../images/products/samsung.jpg" alt="Samsung Galaxy S24" />
-            <span class="product-badge phone">Phone</span>
-          </div>
-          <div class="product-info">
-            <h3>Samsung Galaxy S24</h3>
-            <p class="price">$899 <small>Trending</small></p>
-            <div class="product-actions">
-              <button class="btn-view">View Details</button>
-              <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
-            </div>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-img-wrap">
-            <img src="../images/products/headphones.jpg" alt="Sony Headphones" />
-            <span class="product-badge accessory">Accessory</span>
-          </div>
-          <div class="product-info">
-            <h3>Sony WH-1000XM5</h3>
-            <p class="price">$399 <small>Premium</small></p>
-            <div class="product-actions">
-              <button class="btn-view">View Details</button>
-              <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-  </main>
 
   <footer>
     <div class="footer-inner">
@@ -182,7 +49,6 @@
         <div class="logo-footer">Tech<span>Match</span></div>
         <p>Your destination for modern electronics and smart shopping.</p>
       </div>
-
       <div class="footer-col">
         <h4>Quick Links</h4>
         <ul>
@@ -191,7 +57,6 @@
           <li><a href="cart.html">Cart</a></li>
         </ul>
       </div>
-
       <div class="footer-col">
         <h4>Contact</h4>
         <ul>
@@ -201,11 +66,583 @@
         </ul>
       </div>
     </div>
-
     <div class="footer-bottom">
       <p>&copy; 2026 TechMatch. All rights reserved.</p>
       <p>Designed for Web Application Project</p>
     </div>
   </footer>
+
+  <script>
+    // ─── PRODUCT DATABASE ──────────────────────────────────────────────────────
+    const PRODUCTS = {
+      'macbook-pro-14': {
+        id: 'macbook-pro-14',
+        name: 'MacBook Pro 14',
+        category: 'laptop',
+        price: 7499,
+        image: '../images/products/macpro.jpg',
+        badge: 'Laptop',
+        tagline: 'The ultimate pro laptop with M3 Pro chip.',
+        rating: 4.9,
+        reviewCount: 1284,
+        colors: ['Space Black', 'Silver'],
+        storage: ['512GB', '1TB', '2TB'],
+        specs: {
+          'Chip': 'Apple M3 Pro',
+          'CPU': '11-core (5P + 6E)',
+          'GPU': '14-core GPU',
+          'RAM': '18GB Unified Memory',
+          'Storage': '512GB SSD',
+          'Display': '14.2" Liquid Retina XDR, 3024×1964',
+          'Battery': 'Up to 18 hours',
+          'Weight': '1.61 kg',
+          'Ports': '3x Thunderbolt 4, HDMI, SD Card, MagSafe 3',
+          'OS': 'macOS Sonoma',
+        },
+        reviews: [
+          { user: 'Ahmed K.', rating: 5, date: 'Jan 2026', text: 'Absolutely insane performance. The M3 Pro handles everything I throw at it — 4K editing, Xcode, everything.' },
+          { user: 'Sara M.', rating: 5, date: 'Dec 2025', text: 'Battery life is unreal. I go all day without plugging in. Best laptop I\'ve ever owned.' },
+          { user: 'Omar T.', rating: 4, date: 'Nov 2025', text: 'Great machine but the price is steep. If money is no issue, go for it without hesitation.' },
+        ],
+        suggestions: ['dell-xps-13', 'hp-spectre-x360', 'surface-pro-9'],
+      },
+      'iphone-15-pro': {
+        id: 'iphone-15-pro',
+        name: 'iPhone 15 Pro',
+        category: 'phone',
+        price: 4299,
+        image: '../images/products/iphone15.jpg',
+        badge: 'Phone',
+        tagline: 'Titanium design. A17 Pro chip. Pro camera system.',
+        rating: 4.8,
+        reviewCount: 3210,
+        colors: ['Natural Titanium', 'Blue Titanium', 'White Titanium', 'Black Titanium'],
+        storage: ['128GB', '256GB', '512GB', '1TB'],
+        specs: {
+          'Chip': 'Apple A17 Pro',
+          'Display': '6.1" Super Retina XDR, 2556×1179',
+          'Rear Camera': '48MP Main + 12MP Ultra Wide + 12MP 3x Telephoto',
+          'Front Camera': '12MP TrueDepth',
+          'Battery': '3274 mAh, up to 23h video',
+          'Build': 'Titanium frame, Ceramic Shield',
+          'Connectivity': '5G, Wi-Fi 6E, Bluetooth 5.3, USB-C',
+          'Storage Options': '128GB – 1TB',
+          'Biometrics': 'Face ID',
+          'OS': 'iOS 17',
+        },
+        reviews: [
+          { user: 'Reem A.', rating: 5, date: 'Feb 2026', text: 'The titanium build is so premium. Camera quality is unmatched — especially the 3x zoom.' },
+          { user: 'Khalid B.', rating: 5, date: 'Jan 2026', text: 'Best iPhone yet. USB-C was long overdue. Action button is super useful.' },
+          { user: 'Nora S.', rating: 4, date: 'Dec 2025', text: 'Amazing phone, but battery could be better. Everything else is perfect.' },
+        ],
+        suggestions: ['samsung-s24-ultra', 'google-pixel-8-pro', 'airpods-pro-2'],
+      },
+      'samsung-s24-ultra': {
+        id: 'samsung-s24-ultra',
+        name: 'Samsung Galaxy S24 Ultra',
+        category: 'phone',
+        price: 4899,
+        image: '../images/products/s24u.jpg',
+        badge: 'Phone',
+        tagline: 'Galaxy AI. Built-in S Pen. 200MP camera.',
+        rating: 4.8,
+        reviewCount: 2876,
+        colors: ['Titanium Gray', 'Titanium Black', 'Titanium Violet', 'Titanium Yellow'],
+        storage: ['256GB', '512GB', '1TB'],
+        specs: {
+          'Chip': 'Snapdragon 8 Gen 3',
+          'Display': '6.8" Dynamic AMOLED 2X, 3088×1440, 120Hz',
+          'Rear Camera': '200MP Main + 12MP Ultra Wide + 50MP 5x + 10MP 3x',
+          'Front Camera': '12MP',
+          'Battery': '5000 mAh, 45W fast charge',
+          'Build': 'Titanium frame, Gorilla Glass Armor',
+          'S Pen': 'Built-in with AI features',
+          'Connectivity': '5G, Wi-Fi 7, Bluetooth 5.3, USB-C 3.2',
+          'RAM': '12GB',
+          'OS': 'Android 14 / One UI 6.1',
+        },
+        reviews: [
+          { user: 'Faisal H.', rating: 5, date: 'Feb 2026', text: 'The 200MP camera is mind-blowing. Night mode is better than anything I\'ve used before.' },
+          { user: 'Lina R.', rating: 4, date: 'Jan 2026', text: 'Galaxy AI features are surprisingly useful. The S Pen makes note-taking on the go so easy.' },
+          { user: 'Mohammed Z.', rating: 5, date: 'Dec 2025', text: 'Best Android phone money can buy. The display is absolutely gorgeous.' },
+        ],
+        suggestions: ['iphone-15-pro', 'google-pixel-8-pro', 'sony-wh1000xm5'],
+      },
+      'ipad-air-m2': {
+        id: 'ipad-air-m2',
+        name: 'iPad Air M2',
+        category: 'tablet',
+        price: 2699,
+        image: '../images/products/ipadair.jpg',
+        badge: 'Tablet',
+        tagline: 'Thin. Light. Surprisingly powerful M2 chip.',
+        rating: 4.7,
+        reviewCount: 984,
+        colors: ['Blue', 'Purple', 'Starlight', 'Space Gray'],
+        storage: ['128GB', '256GB', '512GB', '1TB'],
+        specs: {
+          'Chip': 'Apple M2',
+          'Display': '11" or 13" Liquid Retina, 2360×1640',
+          'Rear Camera': '12MP Wide',
+          'Front Camera': '12MP Ultra Wide, Center Stage',
+          'Battery': 'Up to 10 hours',
+          'Connectivity': 'Wi-Fi 6E, Bluetooth 5.3, USB-C',
+          'Apple Pencil': 'Apple Pencil Pro support',
+          'Magic Keyboard': 'Compatible',
+          'Biometrics': 'Touch ID',
+          'OS': 'iPadOS 17',
+        },
+        reviews: [
+          { user: 'Aisha M.', rating: 5, date: 'Feb 2026', text: 'Perfect for university. I use it for notes, drawing, and streaming. The M2 chip makes everything snappy.' },
+          { user: 'Tariq F.', rating: 4, date: 'Jan 2026', text: 'Great tablet. The 13" model is fantastic for creative work. Would love more RAM though.' },
+          { user: 'Dana K.', rating: 5, date: 'Nov 2025', text: 'Beautiful display and incredibly thin. Highly recommend pairing with Apple Pencil Pro.' },
+        ],
+        suggestions: ['iphone-15-pro', 'airpods-pro-2', 'apple-watch-s9'],
+      },
+      'sony-wh1000xm5': {
+        id: 'sony-wh1000xm5',
+        name: 'Sony WH-1000XM5',
+        category: 'accessory',
+        price: 1250,
+        image: '../images/products/sonyh.jpg',
+        badge: 'Accessory',
+        tagline: 'Industry-leading noise cancellation. All-day comfort.',
+        rating: 4.9,
+        reviewCount: 4120,
+        colors: ['Black', 'Platinum Silver'],
+        storage: [],
+        specs: {
+          'Driver': '30mm, Dome type',
+          'Frequency': '4Hz – 40,000Hz',
+          'Battery Life': 'Up to 30 hours (ANC on)',
+          'Charging': 'USB-C, 3min = 3h playback',
+          'ANC': '8 microphones, HD Noise Cancelling Processor QN1',
+          'Connectivity': 'Bluetooth 5.2, 3.5mm jack',
+          'Codecs': 'SBC, AAC, LDAC',
+          'Multipoint': '2 devices simultaneously',
+          'Weight': '250g',
+          'Foldable': 'Yes',
+        },
+        reviews: [
+          { user: 'Yousef A.', rating: 5, date: 'Jan 2026', text: 'The ANC is sorcery. On a plane, I can barely hear the engines. Best headphones I\'ve ever had.' },
+          { user: 'Hind S.', rating: 5, date: 'Dec 2025', text: 'Incredibly comfortable for long work sessions. Sound quality is rich and balanced.' },
+          { user: 'Bader N.', rating: 4, date: 'Oct 2025', text: 'Almost perfect. Touch controls take getting used to, but the audio quality is exceptional.' },
+        ],
+        suggestions: ['airpods-pro-2', 'apple-watch-s9', 'logitech-mx-master'],
+      },
+      'dell-xps-13': {
+        id: 'dell-xps-13',
+        name: 'Dell XPS 13',
+        category: 'laptop',
+        price: 5400,
+        image: '../images/products/dellxps.jpg',
+        badge: 'Laptop',
+        tagline: 'Ultra-compact powerhouse with InfinityEdge display.',
+        rating: 4.7,
+        reviewCount: 762,
+        colors: ['Platinum Silver', 'Graphite'],
+        storage: ['512GB', '1TB', '2TB'],
+        specs: {
+          'Processor': 'Intel Core Ultra 7 155H',
+          'RAM': '16GB LPDDR5x',
+          'Storage': '512GB NVMe SSD',
+          'Display': '13.4" OLED, 2880×1800, Touch',
+          'Graphics': 'Intel Arc Graphics',
+          'Battery': 'Up to 12 hours',
+          'Weight': '1.17 kg',
+          'Ports': '2x Thunderbolt 4, USB-A, microSD',
+          'Webcam': '2MP IR Camera with Windows Hello',
+          'OS': 'Windows 11 Pro',
+        },
+        reviews: [
+          { user: 'Saud M.', rating: 5, date: 'Feb 2026', text: 'Lightest laptop I\'ve ever used. The OLED display is stunning. Perfect travel companion.' },
+          { user: 'Rana F.', rating: 4, date: 'Jan 2026', text: 'Great build quality and design. Fan noise can be noticeable under heavy load.' },
+          { user: 'Ali K.', rating: 5, date: 'Dec 2025', text: 'Best Windows ultrabook on the market. Fast, beautiful, and solidly built.' },
+        ],
+        suggestions: ['macbook-pro-14', 'hp-spectre-x360', 'surface-pro-9'],
+      },
+      'apple-watch-s9': {
+        id: 'apple-watch-s9',
+        name: 'Apple Watch Series 9',
+        category: 'accessory',
+        price: 1750,
+        image: '../images/products/watch9.jpg',
+        badge: 'Accessory',
+        tagline: 'Smarter. Brighter. Double Tap gesture.',
+        rating: 4.8,
+        reviewCount: 2103,
+        colors: ['Midnight', 'Starlight', 'Silver', 'Product Red', 'Pink'],
+        storage: [],
+        specs: {
+          'Chip': 'Apple S9 SiP',
+          'Display': 'Always-On Retina LTPO OLED, 2000 nits',
+          'Health Sensors': 'Heart rate, ECG, Blood Oxygen, Temperature',
+          'GPS': 'L1 and L5 dual-frequency',
+          'Water Resistance': '50 meters (WR50)',
+          'Battery': '18 hours (up to 36h Low Power)',
+          'Connectivity': 'LTE/UMTS, Wi-Fi, Bluetooth 5.3, UWB',
+          'Double Tap': 'Yes',
+          'Case Sizes': '41mm / 45mm',
+          'OS': 'watchOS 10',
+        },
+        reviews: [
+          { user: 'Ghadeer A.', rating: 5, date: 'Feb 2026', text: 'The Double Tap feature is genius. I can answer calls without even touching the watch.' },
+          { user: 'Nawaf R.', rating: 5, date: 'Jan 2026', text: 'Health tracking is incredibly accurate. The display is noticeably brighter outdoors.' },
+          { user: 'Mona S.', rating: 4, date: 'Dec 2025', text: 'Love it overall, just wish the battery lasted more than a day with heavy use.' },
+        ],
+        suggestions: ['iphone-15-pro', 'airpods-pro-2', 'ipad-air-m2'],
+      },
+      'logitech-mx-master': {
+        id: 'logitech-mx-master',
+        name: 'Logitech MX Master 3S',
+        category: 'accessory',
+        price: 420,
+        image: '../images/products/logimouse.jpg',
+        badge: 'Accessory',
+        tagline: 'Precision scrolling. Silent clicks. Multi-device control.',
+        rating: 4.8,
+        reviewCount: 5640,
+        colors: ['Graphite', 'Pale Grey'],
+        storage: [],
+        specs: {
+          'Sensor': '8000 DPI MagSpeed Electromagnetic',
+          'Scroll Wheel': 'MagSpeed, SmartShift',
+          'Buttons': '7 programmable buttons',
+          'Battery': 'Up to 70 days, USB-C charge',
+          'Connectivity': 'Bluetooth, Logi Bolt USB Receiver',
+          'Multi-Device': 'Up to 3 devices (Easy-Switch)',
+          'Compatibility': 'Windows, macOS, Linux, iPadOS',
+          'Ergonomics': 'Right-hand ergonomic design',
+          'Click Sound': '90% quieter clicks',
+          'Software': 'Logi Options+',
+        },
+        reviews: [
+          { user: 'Fahad T.', rating: 5, date: 'Jan 2026', text: 'The best productivity mouse I\'ve ever used. Switching between my laptop and PC with one button is a game changer.' },
+          { user: 'Abeer H.', rating: 5, date: 'Dec 2025', text: 'MagSpeed scrolling is incredibly satisfying. I never want to go back to a regular mouse.' },
+          { user: 'Salman A.', rating: 4, date: 'Nov 2025', text: 'Excellent mouse. Only downside is no left-handed version available.' },
+        ],
+        suggestions: ['macbook-pro-14', 'dell-xps-13', 'hp-spectre-x360'],
+      },
+      'hp-spectre-x360': {
+        id: 'hp-spectre-x360',
+        name: 'HP Spectre x360',
+        category: 'laptop',
+        price: 4900,
+        image: '../images/products/hpspectre.jpg',
+        badge: 'Laptop',
+        tagline: '2-in-1 luxury laptop with OLED touch display.',
+        rating: 4.6,
+        reviewCount: 543,
+        colors: ['Nightfall Black', 'Nocturne Blue'],
+        storage: ['512GB', '1TB', '2TB'],
+        specs: {
+          'Processor': 'Intel Core Ultra 7 155H',
+          'RAM': '16GB LPDDR5x',
+          'Storage': '1TB NVMe SSD',
+          'Display': '14" 2.8K OLED Touch, 120Hz',
+          'Graphics': 'Intel Arc Graphics',
+          'Battery': 'Up to 17 hours',
+          'Weight': '1.57 kg',
+          'Design': '360° hinge, 2-in-1 convertible',
+          'Ports': '2x Thunderbolt 4, USB-A, microSD, HDMI',
+          'OS': 'Windows 11 Home',
+        },
+        reviews: [
+          { user: 'Latifa M.', rating: 5, date: 'Feb 2026', text: 'The OLED display makes everything look amazing. Love using it in tent mode for watching content.' },
+          { user: 'Hassan D.', rating: 4, date: 'Jan 2026', text: 'Premium design and great battery. The 2-in-1 form factor is genuinely useful.' },
+          { user: 'Ruba N.', rating: 5, date: 'Nov 2025', text: 'Best Windows 2-in-1 on the market. Excellent build quality and performance.' },
+        ],
+        suggestions: ['dell-xps-13', 'macbook-pro-14', 'surface-pro-9'],
+      },
+      'google-pixel-8-pro': {
+        id: 'google-pixel-8-pro',
+        name: 'Google Pixel 8 Pro',
+        category: 'phone',
+        price: 3200,
+        image: '../images/products/pixel8.jpg',
+        badge: 'Phone',
+        tagline: 'Google AI built in. The smartest Pixel ever.',
+        rating: 4.7,
+        reviewCount: 1456,
+        colors: ['Obsidian', 'Porcelain', 'Bay'],
+        storage: ['128GB', '256GB', '512GB', '1TB'],
+        specs: {
+          'Chip': 'Google Tensor G3',
+          'Display': '6.7" LTPO OLED, 2992×1344, 1-120Hz',
+          'Rear Camera': '50MP Main + 48MP Ultra Wide + 48MP 5x Telephoto',
+          'Front Camera': '10.5MP',
+          'Battery': '5050 mAh, 30W wired / 23W wireless',
+          'Build': 'Polished aluminum, Gorilla Glass Victus 2',
+          'AI Features': 'Magic Eraser, Best Take, Audio Eraser',
+          'Connectivity': '5G, Wi-Fi 7, Bluetooth 5.3, USB-C 3.2',
+          'Biometrics': 'In-display fingerprint, Face Unlock',
+          'OS': 'Android 14 (7 years updates guaranteed)',
+        },
+        reviews: [
+          { user: 'Joud A.', rating: 5, date: 'Feb 2026', text: 'The AI photo editing features are revolutionary. Magic Eraser alone is worth the price.' },
+          { user: 'Turki B.', rating: 5, date: 'Jan 2026', text: 'Purest Android experience available. Tensor G3 handles everything smoothly.' },
+          { user: 'Wafa S.', rating: 4, date: 'Dec 2025', text: 'Great camera and AI features. Not as fast as Snapdragon competitors but still excellent.' },
+        ],
+        suggestions: ['iphone-15-pro', 'samsung-s24-ultra', 'airpods-pro-2'],
+      },
+      'airpods-pro-2': {
+        id: 'airpods-pro-2',
+        name: 'AirPods Pro (2nd Gen)',
+        category: 'accessory',
+        price: 940,
+        image: '../images/products/airpods.jpg',
+        badge: 'Accessory',
+        tagline: 'Up to 2x more Active Noise Cancellation.',
+        rating: 4.9,
+        reviewCount: 6780,
+        colors: ['White'],
+        storage: [],
+        specs: {
+          'Chip': 'Apple H2',
+          'ANC': 'Up to 2x better noise cancellation',
+          'Transparency Mode': 'Adaptive Audio',
+          'Battery': '6h ANC / 30h with case',
+          'Charging': 'MagSafe / Lightning / USB-C',
+          'Fit': 'XS, S, M, L ear tips',
+          'Water Resistance': 'IPX4 (earbuds + case)',
+          'Spatial Audio': 'Personalized + Dynamic Head Tracking',
+          'Connectivity': 'Bluetooth 5.3',
+          'Controls': 'Touch, Adaptive Touch, Swipe volume',
+        },
+        reviews: [
+          { user: 'Shatha M.', rating: 5, date: 'Feb 2026', text: 'The Adaptive Audio mode is incredible. It automatically adjusts between ANC and Transparency. Magic.' },
+          { user: 'Raed K.', rating: 5, date: 'Jan 2026', text: 'Best earbuds for iPhone users. Spatial Audio makes music and movies completely immersive.' },
+          { user: 'Hessa F.', rating: 4, date: 'Dec 2025', text: 'Excellent sound and ANC. Ear tips occasionally need adjusting during workouts.' },
+        ],
+        suggestions: ['apple-watch-s9', 'iphone-15-pro', 'ipad-air-m2'],
+      },
+      'surface-pro-9': {
+        id: 'surface-pro-9',
+        name: 'Microsoft Surface Pro 9',
+        category: 'laptop',
+        price: 3800,
+        image: '../images/products/surface.jpg',
+        badge: 'Laptop',
+        tagline: 'Tablet versatility meets laptop performance.',
+        rating: 4.6,
+        reviewCount: 421,
+        colors: ['Platinum', 'Graphite', 'Sapphire', 'Forest'],
+        storage: ['128GB', '256GB', '512GB', '1TB'],
+        specs: {
+          'Processor': 'Intel Core i7-1255U',
+          'RAM': '16GB LPDDR5',
+          'Storage': '256GB SSD',
+          'Display': '13" PixelSense Flow, 2880×1920, 120Hz',
+          'Graphics': 'Intel Iris Xe',
+          'Battery': 'Up to 15.5 hours',
+          'Weight': '879g (without keyboard)',
+          'Design': 'Detachable keyboard, kickstand',
+          'Ports': '2x Thunderbolt 4, Surface Connect',
+          'OS': 'Windows 11 Home',
+        },
+        reviews: [
+          { user: 'Samia A.', rating: 5, date: 'Jan 2026', text: 'The most portable full Windows machine I\'ve used. Perfect for my university classes.' },
+          { user: 'Majed H.', rating: 4, date: 'Dec 2025', text: 'Great display and design. Keyboard sold separately is a bummer, but it\'s a solid device.' },
+          { user: 'Rand B.', rating: 5, date: 'Nov 2025', text: 'Love the flexibility. Use it as a tablet for reading and as a laptop for work.' },
+        ],
+        suggestions: ['macbook-pro-14', 'dell-xps-13', 'ipad-air-m2'],
+      },
+    };
+
+    // ─── RENDER STARS ──────────────────────────────────────────────────────────
+    function renderStars(rating) {
+      let html = '';
+      for (let i = 1; i <= 5; i++) {
+        if (i <= Math.floor(rating)) html += '<i class="fa-solid fa-star"></i>';
+        else if (i - rating < 1) html += '<i class="fa-solid fa-star-half-stroke"></i>';
+        else html += '<i class="fa-regular fa-star"></i>';
+      }
+      return html;
+    }
+
+    // ─── RENDER PRODUCT DETAIL ─────────────────────────────────────────────────
+    function renderProduct(product) {
+      const colorsHTML = product.colors.length ? product.colors.map(c =>
+        `<button class="color-btn" data-color="${c}" title="${c}"></button>`
+      ).join('') : '<span class="na-text">N/A</span>';
+
+      const storageHTML = product.storage.length ? product.storage.map((s, i) =>
+        `<button class="storage-btn ${i === 0 ? 'active' : ''}">${s}</button>`
+      ).join('') : '';
+
+      const specsHTML = Object.entries(product.specs).map(([k, v]) =>
+        `<tr><td class="spec-key">${k}</td><td class="spec-val">${v}</td></tr>`
+      ).join('');
+
+      const reviewsHTML = product.reviews.map(r => `
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar">${r.user[0]}</div>
+            <div>
+              <div class="reviewer-name">${r.user}</div>
+              <div class="review-date">${r.date}</div>
+            </div>
+            <div class="review-stars">${renderStars(r.rating)}</div>
+          </div>
+          <p class="review-text">${r.text}</p>
+        </div>
+      `).join('');
+
+      document.getElementById('productDetailView').innerHTML = `
+        <div class="detail-breadcrumb">
+          <a href="../index.html">Home</a>
+          <i class="fa-solid fa-chevron-right"></i>
+          <a href="product.html">Products</a>
+          <i class="fa-solid fa-chevron-right"></i>
+          <span>${product.name}</span>
+        </div>
+
+        <div class="detail-grid">
+          <!-- LEFT: Image -->
+          <div class="detail-img-col">
+            <div class="detail-img-wrap">
+              <img src="${product.image}" alt="${product.name}" id="mainImage" />
+              <span class="detail-badge ${product.category}">${product.badge}</span>
+            </div>
+          </div>
+
+          <!-- RIGHT: Info -->
+          <div class="detail-info-col">
+            <h1 class="detail-name">${product.name}</h1>
+            <p class="detail-tagline">${product.tagline}</p>
+
+            <div class="detail-rating">
+              <div class="stars">${renderStars(product.rating)}</div>
+              <span class="rating-num">${product.rating}</span>
+              <span class="rating-count">(${product.reviewCount.toLocaleString()} reviews)</span>
+            </div>
+
+            <div class="detail-price">$${product.price.toLocaleString()} <small>incl. VAT</small></div>
+
+            ${product.colors.length ? `
+            <div class="detail-option-group">
+              <label>Color</label>
+              <div class="color-options" id="colorOptions">
+                ${product.colors.map((c, i) => `
+                  <button class="color-label-btn ${i === 0 ? 'active' : ''}" data-color="${c}">${c}</button>
+                `).join('')}
+              </div>
+            </div>` : ''}
+
+            ${product.storage.length ? `
+            <div class="detail-option-group">
+              <label>Storage</label>
+              <div class="storage-options" id="storageOptions">
+                ${storageHTML}
+              </div>
+            </div>` : ''}
+
+            <div class="detail-actions">
+              <button class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+              <button class="btn-wishlist-lg" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            </div>
+
+            <div class="detail-perks">
+              <div class="perk"><i class="fa-solid fa-truck-fast"></i> Free Delivery</div>
+              <div class="perk"><i class="fa-solid fa-rotate-left"></i> 30-Day Returns</div>
+              <div class="perk"><i class="fa-solid fa-shield-halved"></i> 2-Year Warranty</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SPECS TABLE -->
+        <div class="detail-section">
+          <h2 class="section-heading">Specifications</h2>
+          <div class="specs-table-wrap">
+            <table class="specs-table">
+              <tbody>${specsHTML}</tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- REVIEWS -->
+        <div class="detail-section">
+          <h2 class="section-heading">Customer Reviews</h2>
+          <div class="reviews-summary">
+            <div class="reviews-score">
+              <div class="big-score">${product.rating}</div>
+              <div class="big-stars">${renderStars(product.rating)}</div>
+              <div class="big-count">${product.reviewCount.toLocaleString()} reviews</div>
+            </div>
+            <div class="reviews-list">${reviewsHTML}</div>
+          </div>
+        </div>
+      `;
+
+      // Color toggle
+      document.querySelectorAll('.color-label-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.color-label-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+        });
+      });
+
+      // Storage toggle
+      document.querySelectorAll('.storage-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.storage-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+        });
+      });
+
+      // Add to cart feedback
+      document.querySelector('.btn-add-cart').addEventListener('click', function() {
+        this.innerHTML = '<i class="fa-solid fa-check"></i> Added!';
+        this.classList.add('added');
+        setTimeout(() => {
+          this.innerHTML = '<i class="fa-solid fa-cart-shopping"></i> Add to Cart';
+          this.classList.remove('added');
+        }, 2000);
+      });
+
+      document.title = `${product.name} — TechMatch`;
+    }
+
+    // ─── RENDER SUGGESTIONS ────────────────────────────────────────────────────
+    function renderSuggestions(suggestionIds) {
+      const grid = document.getElementById('suggestionsGrid');
+      grid.innerHTML = suggestionIds.map(id => {
+        const p = PRODUCTS[id];
+        if (!p) return '';
+        return `
+          <article class="product-card" onclick="location.href='product.html?id=${p.id}'" style="cursor:pointer">
+            <div class="product-img-wrap">
+              <img src="${p.image}" alt="${p.name}" />
+              <span class="product-badge ${p.category}">${p.badge}</span>
+            </div>
+            <div class="product-info">
+              <h3>${p.name}</h3>
+              <p class="price">$${p.price.toLocaleString()} <small>incl. VAT</small></p>
+              <div class="product-actions">
+                <button class="btn-view" onclick="event.stopPropagation(); location.href='product.html?id=${p.id}'">View Details</button>
+                <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    // ─── INIT ──────────────────────────────────────────────────────────────────
+    const params = new URLSearchParams(window.location.search);
+    const productId = params.get('id') || 'iphone-15-pro';
+    const product = PRODUCTS[productId];
+
+    if (product) {
+      renderProduct(product);
+      renderSuggestions(product.suggestions);
+    } else {
+      document.getElementById('productDetailView').innerHTML = `
+        <div style="text-align:center; padding: 6rem 2rem;">
+          <h2>Product not found</h2>
+          <a href="../index.html" class="btn-add-cart" style="display:inline-block; margin-top:1.5rem; text-decoration:none;">← Back to Home</a>
+        </div>`;
+    }
+  </script>
 </body>
 </html>
