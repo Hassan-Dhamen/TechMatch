@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - TechMatch</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .login-page {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f7f9fc;
+      padding: 20px;
+    }
+
+    .login-box {
+      width: 100%;
+      max-width: 420px;
+      background: white;
+      padding: 35px;
+      border-radius: 14px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
+
+    .login-box h1 {
+      color: #0d1b2a;
+      margin-bottom: 10px;
+    }
+
+    .login-box p {
+      color: #555;
+      margin-bottom: 25px;
+    }
+
+    .login-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      text-align: left;
+    }
+
+    .login-form label {
+      font-weight: bold;
+      color: #0d1b2a;
+    }
+
+    .login-form input,
+    .login-form select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .login-form button {
+      background: #00b4d8;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .login-form button:hover,
+    .login-form button:focus {
+      background: #0096c7;
+    }
+
+    .back-home {
+      display: inline-block;
+      margin-top: 18px;
+      text-decoration: none;
+      color: #0077b6;
+      font-weight: bold;
+    }
+
+    .back-home:hover,
+    .back-home:focus {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <section class="login-page">
+    <div class="login-box">
+      <h1>Login</h1>
+      <p>Sign in to your TechMatch account</p>
+
+      <form class="login-form">
+        <div>
+          <label for="role">Login Type</label>
+          <select id="role" name="role">
+            <option value="customer">Customer</option>
+            <option value="admin">Admin</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            required
+          />
+        </div>
+
+        <button type="submit">Login</button>
+      </form>
+
+      <a href="../index.html" class="back-home">Back to Home</a>
+    </div>
+  </section>
+</body>
+</html>
