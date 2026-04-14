@@ -123,3 +123,10 @@
   background: var(--gray-100);
   color: var(--black);
 }
+.back-btn{
+display:inline-block;
+margin:20px;
+text-decoration:none;
+color:#000;
+font-weight:bold;
+}
