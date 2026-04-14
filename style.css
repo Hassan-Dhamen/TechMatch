@@ -218,7 +218,14 @@ body {
   transition: 0.3s;
 }
 
-.product-card button:hover,
+.product-card {
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+}
+
 .product-card button:focus {
   background: #0096c7;
 }
