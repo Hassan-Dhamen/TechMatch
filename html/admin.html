@@ -1,1 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Dashboard</title>
 
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../css/admin.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">TechMatch Admin</div>
+  </nav>
+</header>
+
+<main class="admin-container">
+
+  <h1>Dashboard</h1>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat-box"><h3>👤 Users</h3><p>120</p></div>
+    <div class="stat-box"><h3>🛒 Orders</h3><p>45</p></div>
+    <div class="stat-box"><h3>📦 Products</h3><p>32</p></div>
+    <div class="stat-box"><h3>⭐ Avg Rating</h3><p>4.8</p></div>
+  </div>
+
+  <!-- ADD PRODUCT -->
+  <div class="admin-card">
+    <h2><i class="fa fa-plus"></i> Add Product</h2>
+
+    <div class="form-grid">
+      <input type="text" placeholder="Product Name">
+      <input type="number" placeholder="Price">
+      <input type="number" placeholder="Stock">
+
+      <select>
+        <option value="">Select Category</option>
+        <option value="phone">Phone</option>
+        <option value="laptop">Laptop</option>
+        <option value="tablet">Tablet</option>
+        <option value="accessory">Accessory</option>
+      </select>
+
+      <input type="text" placeholder="Brand">
+      <input type="text" placeholder="Model">
+    </div>
+
+    <textarea placeholder="Product Description"></textarea>
+
+    <!-- 🔥 Dynamic Specifications -->
+    <h3>Specifications</h3>
+
+    <div id="specs-container">
+
+      <div class="spec-row">
+        <input type="text" placeholder="Spec Name (RAM)">
+        <input type="text" placeholder="Value (8GB)">
+      </div>
+
+    </div>
+
+    <button onclick="addSpec()" class="btn">+ Add Specification</button>
+
+    <br><br>
+
+    <input type="file">
+
+    <button class="btn">Add Product</button>
+  </div>
+
+  <!-- PRODUCTS -->
+  <div class="admin-card">
+    <h2><i class="fa fa-box"></i> Products</h2>
+
+    <table>
+      <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>Stock</th>
+        <th>Rating</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+
+      <tr>
+        <td><img src="../images/products/iphone15.jpg"></td>
+        <td>iPhone 15</td>
+        <td>Phone</td>
+        <td>$999</td>
+        <td>5</td>
+        <td>⭐ 4.9</td>
+        <td class="low-stock">Low</td>
+        <td>
+          <button class="edit"><i class="fa fa-edit"></i></button>
+          <button class="delete"><i class="fa fa-trash"></i></button>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+</main>
+
+<script src="../js/admin.js"></script>
+
+</body>
+</html>
