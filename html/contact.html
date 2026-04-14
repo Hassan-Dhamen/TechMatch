@@ -1,105 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Contact - TechMatch</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - TechMatch</title>
 
-<link rel="stylesheet" href="../style.css">
-<link rel="stylesheet" href="../css/contact.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/contact.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Syne:wght@700;800&display=swap"
+    rel="stylesheet"
+  />
 </head>
 
 <body>
-<a href="../index.html" class="back-btn">← Back</a>
-<header>
-  <nav class="navbar">
+  <header>
+    <nav class="navbar">
+      <a href="../index.html" class="logo">Tech<span>Match</span></a>
 
-    <a href="../index.html" class="logo">Tech<span>Match</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
 
-    <ul class="nav-links">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="../index.html#products">Products</a></li>
-      <li><a href="product.html">Browse</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="profile.html">Profile</a></li>
-    </ul>
+      <div class="nav-actions">
+        <a href="login.html" class="btn-nav btn-nav-outline">Login</a>
+        <a href="cart.html" class="cart-icon" aria-label="Shopping cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-count">2</span>
+        </a>
+      </div>
+    </nav>
+  </header>
 
-    <div class="nav-actions">
-      <a href="login.html" class="btn-nav btn-nav-outline">Login</a>
-      <a href="profile.html">Go to Profile</a>
-      <a href="cart.html" class="cart-icon">
-        <i class="fa-solid fa-cart-shopping"></i>
-        <span class="cart-count">2</span>
-      </a>
-    </div>
-
-  </nav>
-</header>
-
-<main class="contact-container">
-
-  <h1>TechMatch Hub</h1>
-  <p class="subtitle">Smart Electronics Platform – University Based Project</p>
-
-  <div class="contact-grid">
-
-    <!-- INFO -->
-    <div class="contact-info">
-
-      <h3>📍 Location</h3>
-      <p><i class="fa fa-location-dot"></i> University Campus – IT Building</p>
-
-      <h3>📧 Contact</h3>
-      <p><i class="fa fa-envelope"></i> techmatch@university.edu</p>
-
-      <h3>💡 About</h3>
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <span class="page-eyebrow"><span></span> Get In Touch</span>
+      <h1>Contact <em>TechMatch</em></h1>
       <p>
-        TechMatch is a smart electronics platform developed as a university project.
-        It helps users explore and compare devices with smart recommendations.
+        Reach out to us for product questions, order support, or any general inquiry
+        about the TechMatch platform.
       </p>
+    </div>
+  </section>
 
-      <div class="badge">🟢 Online Platform (24/7)</div>
+  <main class="contact-container">
+    <div class="contact-grid">
+      <section class="contact-info card-box">
+        <h2>Contact Information</h2>
 
+        <div class="info-item">
+          <div class="info-icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div>
+            <h3>Location</h3>
+            <p>University Campus – IT Building</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <div>
+            <h3>Email</h3>
+            <p>techmatch@university.edu</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">
+            <i class="fa-solid fa-clock"></i>
+          </div>
+          <div>
+            <h3>Availability</h3>
+            <p>Online Platform – 24/7</p>
+          </div>
+        </div>
+
+        <div class="about-box">
+          <h3>About TechMatch</h3>
+          <p>
+            TechMatch is a smart electronics platform developed as a university
+            project. It helps users explore, compare, and discover devices through
+            a modern and user-friendly interface.
+          </p>
+        </div>
+      </section>
+
+      <section class="contact-form card-box">
+        <h2>Send Your Inquiry</h2>
+
+        <form>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Enter your name" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" placeholder="Enter your email" />
+          </div>
+
+          <div class="form-group">
+            <label for="type">Inquiry Type</label>
+            <select id="type">
+              <option>Select Inquiry Type</option>
+              <option>Product Question</option>
+              <option>Order Issue</option>
+              <option>General Inquiry</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Write your message..."></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </section>
     </div>
 
-    <!-- FORM -->
-    <div class="contact-form">
+    <section class="map-section card-box">
+      <div class="map-header">
+        <h2>Find Us</h2>
+        <p>Our project location on campus.</p>
+      </div>
 
-      <h3>Send Your Inquiry</h3>
+      <div class="map-frame">
+        <iframe
+          src="https://www.google.com/maps?q=King%20Fahd%20University&output=embed"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+  </main>
 
-      <input type="text" placeholder="Your Name">
-      <input type="email" placeholder="Your Email">
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-footer">Tech<span>Match</span></div>
+        <p>Your destination for modern electronics and smart shopping.</p>
+      </div>
 
-      <select>
-        <option>Select Inquiry Type</option>
-        <option>Product Question</option>
-        <option>Order Issue</option>
-        <option>General Inquiry</option>
-      </select>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </div>
 
-      <textarea placeholder="Write your message..."></textarea>
-
-      <button>Send Message</button>
-
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="#">techmatch@university.edu</a></li>
+        </ul>
+      </div>
     </div>
 
-  </div>
-
-  <!-- MAP -->
-  <div class="map">
-    <iframe 
-      src="https://www.google.com/maps?q=King%20Fahd%20University&output=embed"
-      height="350"
-      width="100%"
-      style="border:0;">
-    </iframe>
-  </div>
-
-</main>
-
-<footer>
-  <p>&copy; 2026 TechMatch Project</p>
-</footer>
-
+    <div class="footer-bottom">
+      <p>&copy; 2026 TechMatch. All rights reserved.</p>
+      <p>Designed for Web Application Project</p>
+    </div>
+  </footer>
 </body>
 </html>
