@@ -1,79 +1,68 @@
-.signup-wrapper{
-  min-height: calc(100vh - 160px);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  padding:50px 20px;
+/* ===== SIGN UP SPECIFIC ===== */
+
+/* تكبير بسيط للفورم لأنه أطول */
+.login-box {
+  max-width: 480px;
 }
 
-.signup-box{
-  width:100%;
-  max-width:450px;
-  background:white;
-  padding:35px;
-  border-radius:14px;
-  box-shadow:0 4px 18px rgba(0,0,0,0.08);
+/* ترتيب أفضل للفورم */
+.login-form {
+  gap: 1.1rem;
 }
 
-.signup-box h1{
-  text-align:center;
-  color:#0d1b2a;
-  margin-bottom:10px;
+/* تحسين الحقول */
+.login-form input,
+.login-form select {
+  border-radius: 14px;
+  padding: 14px 16px;
 }
 
-.signup-box p{
-  text-align:center;
-  color:#555;
-  margin-bottom:25px;
+/* زر التسجيل */
+.login-form button {
+  margin-top: 0.6rem;
+  padding: 14px 22px;
+  border-radius: 999px;
+  background: var(--black);
+  color: var(--white);
+  font-weight: 500;
+  transition: all 0.2s;
 }
 
-.signup-form{
-  display:flex;
-  flex-direction:column;
-  gap:15px;
+.login-form button:hover {
+  background: var(--gray-800);
+  transform: translateY(-1px);
 }
 
-.signup-form label{
-  font-weight:bold;
-  color:#0d1b2a;
-  margin-bottom:6px;
+/* روابط تحت */
+.login-links {
+  margin-top: 1.4rem;
+  text-align: center;
 }
 
-.signup-form input,
-.signup-form select{
-  width:100%;
-  padding:12px;
-  border:1px solid #ccc;
-  border-radius:8px;
+.login-links p {
+  font-size: 0.9rem;
+  color: var(--gray-600);
 }
 
-.signup-form button{
-  background:#00b4d8;
-  color:white;
-  border:none;
-  padding:12px;
-  border-radius:8px;
-  cursor:pointer;
-  transition:0.3s;
+.login-links a {
+  display: inline-block;
+  margin-top: 4px;
+  color: var(--black);
+  font-weight: 500;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 999px;
+  transition: 0.2s;
 }
 
-.signup-form button:hover{
-  background:#0096c7;
+.login-links a:hover {
+  background: var(--gray-100);
 }
 
-.signup-links{
-  text-align:center;
-  margin-top:20px;
-}
-
-.signup-links a{
-  color:#0077b6;
-  text-decoration:none;
-}
-.back-btn{
-display:inline-block;
-margin:20px;
-text-decoration:none;
-color:#000;
-font-weight:bold;
+/* Responsive */
+@media (max-width: 560px) {
+  .login-box {
+    margin: 1rem;
+    padding: 1.4rem;
+  }
 }
