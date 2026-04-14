@@ -1,0 +1,60 @@
+.profile-container{
+  padding:40px;
+  background:#f5f7fb;
+  min-height:100vh;
+}
+
+.profile-container h1{
+  margin-bottom:20px;
+}
+
+.profile-grid{
+  display:grid;
+  grid-template-columns:1fr 2fr;
+  gap:20px;
+}
+
+.profile-card{
+  background:white;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+.profile-card h2{
+  margin-bottom:15px;
+}
+
+.profile-card p{
+  margin:10px 0;
+}
+
+button{
+  margin-top:10px;
+  background:#00b4d8;
+  color:white;
+  border:none;
+  padding:10px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+th, td{
+  padding:10px;
+  border-bottom:1px solid #eee;
+}
+
+.done{
+  color:green;
+  font-weight:bold;
+}
+
+.pending{
+  color:orange;
+  font-weight:bold;
+}
