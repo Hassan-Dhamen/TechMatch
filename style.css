@@ -272,3 +272,68 @@ a:focus {
     justify-content: center;
   }
 }
+/* ===== Login Page ===== */
+
+.login-wrapper {
+  min-height: calc(100vh - 160px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #f7f9fc;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 430px;
+  background: white;
+  padding: 35px;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+.login-box h1 {
+  text-align: center;
+  color: #0d1b2a;
+  margin-bottom: 10px;
+}
+
+.login-box p {
+  text-align: center;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-form label {
+  font-weight: bold;
+  color: #0d1b2a;
+  margin-bottom: 6px;
+}
+
+.login-form input,
+.login-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.login-form button {
+  background: #00b4d8;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-form button:hover {
+  background: #0096c7;
+}
