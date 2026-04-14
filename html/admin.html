@@ -1,132 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Admin Dashboard</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard - TechMatch</title>
 
-<link rel="stylesheet" href="../style.css">
-<link rel="stylesheet" href="../css/admin.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/admin.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Syne:wght@700;800&display=swap"
+    rel="stylesheet"
+  />
 </head>
 
 <body>
-<a href="../index.html" class="back-btn">← Back</a>
-<header>
-  <nav class="navbar">
+  <header>
+    <nav class="navbar">
+      <a href="../index.html" class="logo">Tech<span>Match</span></a>
 
-    <a href="../index.html" class="logo">Tech<span>Match</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
 
-    <ul class="nav-links">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="../index.html#products">Products</a></li>
-      <li><a href="product.html">Browse</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="profile.html">Profile</a></li>
-    </ul>
+      <div class="nav-actions">
+        <a href="login.html" class="btn-nav btn-nav-outline">Login</a>
+        <a href="cart.html" class="cart-icon" aria-label="Shopping cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-count">2</span>
+        </a>
+      </div>
+    </nav>
+  </header>
 
-    <div class="nav-actions">
-      <a href="login.html" class="btn-nav btn-nav-outline">Login</a>
-
-      <a href="cart.html" class="cart-icon">
-        <i class="fa-solid fa-cart-shopping"></i>
-        <span class="cart-count">2</span>
-      </a>
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <span class="page-eyebrow"><span></span> Control Center</span>
+      <h1>Admin <em>Dashboard</em></h1>
+      <p>
+        Manage products, monitor store statistics, and keep your TechMatch
+        platform organized through a clean dashboard interface.
+      </p>
     </div>
+  </section>
 
-  </nav>
-</header>
+  <main class="admin-container">
+    <section class="stats-grid">
+      <article class="stat-box">
+        <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+        <div>
+          <h3>Users</h3>
+          <p>120</p>
+        </div>
+      </article>
 
-<main class="admin-container">
+      <article class="stat-box">
+        <div class="stat-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+        <div>
+          <h3>Orders</h3>
+          <p>45</p>
+        </div>
+      </article>
 
-  <h1>Dashboard</h1>
+      <article class="stat-box">
+        <div class="stat-icon"><i class="fa-solid fa-box"></i></div>
+        <div>
+          <h3>Products</h3>
+          <p>32</p>
+        </div>
+      </article>
 
-  <!-- STATS -->
-  <div class="stats">
-    <div class="stat-box"><h3>👤 Users</h3><p>120</p></div>
-    <div class="stat-box"><h3>🛒 Orders</h3><p>45</p></div>
-    <div class="stat-box"><h3>📦 Products</h3><p>32</p></div>
-    <div class="stat-box"><h3>⭐ Avg Rating</h3><p>4.8</p></div>
-  </div>
+      <article class="stat-box">
+        <div class="stat-icon"><i class="fa-solid fa-star"></i></div>
+        <div>
+          <h3>Avg Rating</h3>
+          <p>4.8</p>
+        </div>
+      </article>
+    </section>
 
-  <!-- ADD PRODUCT -->
-  <div class="admin-card">
-    <h2><i class="fa fa-plus"></i> Add Product</h2>
-
-    <div class="form-grid">
-      <input type="text" placeholder="Product Name">
-      <input type="number" placeholder="Price">
-      <input type="number" placeholder="Stock">
-
-      <select>
-        <option value="">Select Category</option>
-        <option value="phone">Phone</option>
-        <option value="laptop">Laptop</option>
-        <option value="tablet">Tablet</option>
-        <option value="accessory">Accessory</option>
-      </select>
-
-      <input type="text" placeholder="Brand">
-      <input type="text" placeholder="Model">
-    </div>
-
-    <textarea placeholder="Product Description"></textarea>
-
-    <!-- 🔥 Dynamic Specifications -->
-    <h3>Specifications</h3>
-
-    <div id="specs-container">
-
-      <div class="spec-row">
-        <input type="text" placeholder="Spec Name (RAM)">
-        <input type="text" placeholder="Value (8GB)">
+    <section class="admin-card">
+      <div class="card-title">
+        <h2><i class="fa-solid fa-plus"></i> Add Product</h2>
+        <p>Fill in the product details to add a new item.</p>
       </div>
 
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Product Name</label>
+          <input type="text" placeholder="Enter product name" />
+        </div>
+
+        <div class="form-group">
+          <label>Price</label>
+          <input type="number" placeholder="Enter price" />
+        </div>
+
+        <div class="form-group">
+          <label>Stock</label>
+          <input type="number" placeholder="Enter stock" />
+        </div>
+
+        <div class="form-group">
+          <label>Category</label>
+          <select>
+            <option value="">Select Category</option>
+            <option value="phone">Phone</option>
+            <option value="laptop">Laptop</option>
+            <option value="tablet">Tablet</option>
+            <option value="accessory">Accessory</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Brand</label>
+          <input type="text" placeholder="Enter brand" />
+        </div>
+
+        <div class="form-group">
+          <label>Model</label>
+          <input type="text" placeholder="Enter model" />
+        </div>
+      </div>
+
+      <div class="form-group full-width">
+        <label>Product Description</label>
+        <textarea placeholder="Write product description..."></textarea>
+      </div>
+
+      <div class="specs-header">
+        <h3>Specifications</h3>
+        <button onclick="addSpec()" class="btn-secondary-admin" type="button">+ Add Specification</button>
+      </div>
+
+      <div id="specs-container">
+        <div class="spec-row">
+          <input type="text" placeholder="Spec Name (RAM)" />
+          <input type="text" placeholder="Value (8GB)" />
+        </div>
+      </div>
+
+      <div class="form-group full-width file-group">
+        <label>Product Image</label>
+        <input type="file" />
+      </div>
+
+      <button class="btn-primary-admin" type="button">Add Product</button>
+    </section>
+
+    <section class="admin-card">
+      <div class="card-title">
+        <h2><i class="fa-solid fa-box-open"></i> Products</h2>
+        <p>Manage and review current store inventory.</p>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Category</th>
+              <th>Price</th>
+              <th>Stock</th>
+              <th>Rating</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>
+                <img src="../images/products/iphone15.jpg" alt="iPhone 15" class="product-thumb" />
+              </td>
+              <td>iPhone 15</td>
+              <td>Phone</td>
+              <td>$999</td>
+              <td>5</td>
+              <td>⭐ 4.9</td>
+              <td><span class="status low-stock">Low</span></td>
+              <td>
+                <div class="action-buttons">
+                  <button class="icon-btn edit"><i class="fa-solid fa-pen"></i></button>
+                  <button class="icon-btn delete"><i class="fa-solid fa-trash"></i></button>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <img src="../images/products/macbook.jpg" alt="MacBook" class="product-thumb" />
+              </td>
+              <td>MacBook Air</td>
+              <td>Laptop</td>
+              <td>$1299</td>
+              <td>12</td>
+              <td>⭐ 4.8</td>
+              <td><span class="status active">Available</span></td>
+              <td>
+                <div class="action-buttons">
+                  <button class="icon-btn edit"><i class="fa-solid fa-pen"></i></button>
+                  <button class="icon-btn delete"><i class="fa-solid fa-trash"></i></button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-footer">Tech<span>Match</span></div>
+        <p>Your destination for modern electronics and smart shopping.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="admin.html">Admin</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="#">techmatch@university.edu</a></li>
+        </ul>
+      </div>
     </div>
 
-    <button onclick="addSpec()" class="btn">+ Add Specification</button>
+    <div class="footer-bottom">
+      <p>&copy; 2026 TechMatch. All rights reserved.</p>
+      <p>Designed for Web Application Project</p>
+    </div>
+  </footer>
 
-    <br><br>
-
-    <input type="file">
-
-    <button class="btn">Add Product</button>
-  </div>
-
-  <!-- PRODUCTS -->
-  <div class="admin-card">
-    <h2><i class="fa fa-box"></i> Products</h2>
-
-    <table>
-      <tr>
-        <th>Image</th>
-        <th>Name</th>
-        <th>Category</th>
-        <th>Price</th>
-        <th>Stock</th>
-        <th>Rating</th>
-        <th>Status</th>
-        <th>Actions</th>
-      </tr>
-
-      <tr>
-        <td><img src="../images/products/iphone15.jpg"></td>
-        <td>iPhone 15</td>
-        <td>Phone</td>
-        <td>$999</td>
-        <td>5</td>
-        <td>⭐ 4.9</td>
-        <td class="low-stock">Low</td>
-        <td>
-          <button class="edit"><i class="fa fa-edit"></i></button>
-          <button class="delete"><i class="fa fa-trash"></i></button>
-        </td>
-      </tr>
-    </table>
-  </div>
-
-</main>
-
-<script src="../js/admin.js"></script>
-
+  <script src="../js/admin.js"></script>
 </body>
 </html>
