@@ -1,1 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart - TechMatch</title>
+
+  <link rel="stylesheet" href="../css/cart.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="../index.html" class="logo">Tech<span>Match</span></a>
+
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn-nav btn-nav-outline">Sign In</a>
+        <a href="cart.html" class="cart-icon" aria-label="Shopping cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-count">2</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <span class="page-eyebrow"><span></span> Your Order</span>
+      <h1>Your <em>Shopping Cart</em></h1>
+      <p>
+        Review your selected products, update quantities, and continue to checkout
+        with a clean and simple experience.
+      </p>
+    </div>
+  </section>
+
+  <main class="cart-container">
+    <section class="cart-items-section">
+      <div class="section-head">
+        <h2>Cart Items</h2>
+        <span class="items-count">2 items</span>
+      </div>
+
+      <div class="cart-list">
+        <article class="cart-item">
+          <div class="cart-item-image">
+            <img src="../images/products/iphone.jpg" alt="iPhone 15 Pro" />
+          </div>
+
+          <div class="cart-item-details">
+            <span class="item-badge phone">Phone</span>
+            <h3>iPhone 15 Pro</h3>
+            <p class="item-desc">A premium smartphone with powerful performance and elegant design.</p>
+            <p class="item-price">$999</p>
+          </div>
+
+          <div class="cart-item-actions">
+            <div class="quantity-box">
+              <button type="button">-</button>
+              <span>1</span>
+              <button type="button">+</button>
+            </div>
+            <button class="remove-btn">Remove</button>
+          </div>
+        </article>
+
+        <article class="cart-item">
+          <div class="cart-item-image">
+            <img src="../images/products/airpods.jpg" alt="AirPods Pro" />
+          </div>
+
+          <div class="cart-item-details">
+            <span class="item-badge accessory">Accessory</span>
+            <h3>AirPods Pro</h3>
+            <p class="item-desc">Wireless earbuds with active noise cancellation and immersive sound.</p>
+            <p class="item-price">$249</p>
+          </div>
+
+          <div class="cart-item-actions">
+            <div class="quantity-box">
+              <button type="button">-</button>
+              <span>1</span>
+              <button type="button">+</button>
+            </div>
+            <button class="remove-btn">Remove</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <aside class="order-summary">
+      <h2>Order Summary</h2>
+
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <span>$1248</span>
+      </div>
+
+      <div class="summary-row">
+        <span>Shipping</span>
+        <span>$20</span>
+      </div>
+
+      <div class="summary-row">
+        <span>Tax</span>
+        <span>$50</span>
+      </div>
+
+      <div class="summary-total">
+        <span>Total</span>
+        <span>$1318</span>
+      </div>
+
+      <button class="checkout-btn">Proceed to Checkout</button>
+      <a href="product.html" class="continue-btn">Continue Shopping</a>
+    </aside>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-footer">Tech<span>Match</span></div>
+        <p>Your destination for modern electronics and smart shopping.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="contact.html">Support</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="#">support@techmatch.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 TechMatch. All rights reserved.</p>
+      <p>Designed for Web Application Project</p>
+    </div>
+  </footer>
+</body>
+</html>
 
