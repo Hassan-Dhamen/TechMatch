@@ -1,23 +1,23 @@
 /* ===== SIGN UP SPECIFIC ===== */
 
-/* تكبير بسيط للفورم لأنه أطول */
+/* Slightly larger form container for signup */
 .login-box {
   max-width: 480px;
 }
 
-/* ترتيب أفضل للفورم */
+/* Better spacing between form fields */
 .login-form {
   gap: 1.1rem;
 }
 
-/* تحسين الحقول */
+/* Input & select styling */
 .login-form input,
 .login-form select {
-  border-radius: 14px;
   padding: 14px 16px;
+  border-radius: 14px;
 }
 
-/* زر التسجيل */
+/* Submit button */
 .login-form button {
   margin-top: 0.6rem;
   padding: 14px 22px;
@@ -25,7 +25,7 @@
   background: var(--black);
   color: var(--white);
   font-weight: 500;
-  transition: all 0.2s;
+  transition: all 0.2s ease;
 }
 
 .login-form button:hover {
@@ -33,7 +33,7 @@
   transform: translateY(-1px);
 }
 
-/* روابط تحت */
+/* Links section */
 .login-links {
   margin-top: 1.4rem;
   text-align: center;
@@ -42,17 +42,17 @@
 .login-links p {
   font-size: 0.9rem;
   color: var(--gray-600);
+  margin-bottom: 4px;
 }
 
 .login-links a {
   display: inline-block;
-  margin-top: 4px;
+  padding: 6px 12px;
+  border-radius: 999px;
   color: var(--black);
   font-weight: 500;
   text-decoration: none;
-  padding: 6px 12px;
-  border-radius: 999px;
-  transition: 0.2s;
+  transition: background 0.2s ease;
 }
 
 .login-links a:hover {
