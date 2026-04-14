@@ -1,113 +1,86 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Admin Dashboard</title>
+.admin-container{
+  padding:40px;
+  background:#f5f7fb;
+  min-height:100vh;
+}
 
-<link rel="stylesheet" href="../style.css">
-<link rel="stylesheet" href="../css/admin.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
+.stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  margin-bottom:25px;
+}
 
-<body>
+.stat-box{
+  background:white;
+  padding:20px;
+  border-radius:12px;
+  text-align:center;
+  box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
 
-<header>
-  <nav class="navbar">
-    <div class="logo">TechMatch Admin</div>
-  </nav>
-</header>
+.admin-card{
+  background:white;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom:20px;
+}
 
-<main class="admin-container">
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+  margin-bottom:15px;
+}
 
-  <h1>Dashboard</h1>
+input, select, textarea{
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #ddd;
+  width:100%;
+}
 
-  <!-- STATS -->
-  <div class="stats">
-    <div class="stat-box"><h3>👤 Users</h3><p>120</p></div>
-    <div class="stat-box"><h3>🛒 Orders</h3><p>45</p></div>
-    <div class="stat-box"><h3>📦 Products</h3><p>32</p></div>
-    <div class="stat-box"><h3>⭐ Avg Rating</h3><p>4.8</p></div>
-  </div>
+textarea{
+  margin:15px 0;
+}
 
-  <!-- ADD PRODUCT -->
-  <div class="admin-card">
-    <h2><i class="fa fa-plus"></i> Add Product</h2>
+.btn{
+  background:#00b4d8;
+  color:white;
+  padding:10px 20px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
 
-    <div class="form-grid">
-      <input type="text" placeholder="Product Name">
-      <input type="number" placeholder="Price">
-      <input type="number" placeholder="Stock">
+/* 🔥 Dynamic specs */
+.spec-row{
+  display:flex;
+  gap:10px;
+  margin-bottom:10px;
+}
 
-      <select>
-        <option value="">Select Category</option>
-        <option value="phone">Phone</option>
-        <option value="laptop">Laptop</option>
-        <option value="tablet">Tablet</option>
-        <option value="accessory">Accessory</option>
-      </select>
+.spec-row input{
+  flex:1;
+}
 
-      <input type="text" placeholder="Brand">
-      <input type="text" placeholder="Model">
-    </div>
+table{
+  width:100%;
+  margin-top:15px;
+  border-collapse:collapse;
+}
 
-    <textarea placeholder="Product Description"></textarea>
+th, td{
+  padding:12px;
+  border-bottom:1px solid #eee;
+}
 
-    <!-- 🔥 Dynamic Specifications -->
-    <h3>Specifications</h3>
+.low-stock{
+  color:red;
+  font-weight:bold;
+}
 
-    <div id="specs-container">
-
-      <div class="spec-row">
-        <input type="text" placeholder="Spec Name (RAM)">
-        <input type="text" placeholder="Value (8GB)">
-      </div>
-
-    </div>
-
-    <button onclick="addSpec()" class="btn">+ Add Specification</button>
-
-    <br><br>
-
-    <input type="file">
-
-    <button class="btn">Add Product</button>
-  </div>
-
-  <!-- PRODUCTS -->
-  <div class="admin-card">
-    <h2><i class="fa fa-box"></i> Products</h2>
-
-    <table>
-      <tr>
-        <th>Image</th>
-        <th>Name</th>
-        <th>Category</th>
-        <th>Price</th>
-        <th>Stock</th>
-        <th>Rating</th>
-        <th>Status</th>
-        <th>Actions</th>
-      </tr>
-
-      <tr>
-        <td><img src="../images/products/iphone15.jpg"></td>
-        <td>iPhone 15</td>
-        <td>Phone</td>
-        <td>$999</td>
-        <td>5</td>
-        <td>⭐ 4.9</td>
-        <td class="low-stock">Low</td>
-        <td>
-          <button class="edit"><i class="fa fa-edit"></i></button>
-          <button class="delete"><i class="fa fa-trash"></i></button>
-        </td>
-      </tr>
-    </table>
-  </div>
-
-</main>
-
-<script src="../js/admin.js"></script>
-
-</body>
-</html>
+img{
+  width:50px;
+}
