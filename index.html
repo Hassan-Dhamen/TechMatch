@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechMatch - Smart Electronics Store</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">TechMatch</div>
+
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#">Categories</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+      <div class="cart-icon" aria-label="Shopping cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart-count">2</span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Smart Electronics Store</h1>
+      <p>Find the latest phones, laptops, tablets, and accessories with ease.</p>
+      <a href="#products" class="btn">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="container" id="products">
+
+    <!-- Filter Sidebar -->
+    <aside class="sidebar" aria-label="Product filters">
+      <h2>Filter Products</h2>
+
+      <div class="filter-group">
+        <label for="search">Search</label>
+        <input type="text" id="search" placeholder="Search by product name" />
+      </div>
+
+      <div class="filter-group">
+        <label for="category">Category</label>
+        <select id="category">
+          <option value="all">All Categories</option>
+          <option value="phone">Phones</option>
+          <option value="laptop">Laptops</option>
+          <option value="tablet">Tablets</option>
+          <option value="accessory">Accessories</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="price">Max Price: <span id="priceValue">$3000</span></label>
+        <input type="range" id="price" min="50" max="3000" value="3000" step="50" />
+      </div>
+
+      <button class="clear-btn" id="clearFilters">Clear Filters</button>
+    </aside>
+
+    <!-- Product Section -->
+    <section class="products-section">
+      <h2>Featured Products</h2>
+
+      <div class="products-grid" id="productsGrid">
+
+        <article class="product-card" data-category="phone" data-price="999">
+          <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500" alt="Smartphone" />
+          <h3>iPhone 14</h3>
+          <p class="price">$999</p>
+          <button>Add to Cart</button>
+        </article>
+
+        <article class="product-card" data-category="phone" data-price="850">
+          <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=500" alt="Samsung phone" />
+          <h3>Samsung S23</h3>
+          <p class="price">$850</p>
+          <button>Add to Cart</button>
+        </article>
+
+        <article class="product-card" data-category="laptop" data-price="2100">
+          <img src="https://images.unsplash.com/photo-1517336714739-489689fd1ca8?w=500" alt="Laptop" />
+          <h3>MacBook Pro</h3>
+          <p class="price">$2100</p>
+          <button>Add to Cart</button>
+        </article>
+
+        <article class="product-card" data-category="laptop" data-price="1400">
+          <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500" alt="HP laptop" />
+          <h3>HP Pavilion</h3>
+          <p class="price">$1400</p>
+          <button>Add to Cart</button>
+        </article>
+
+        <article class="product-card" data-category="tablet" data-price="700">
+          <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=500" alt="Tablet" />
+          <h3>iPad Air</h3>
+          <p class="price">$700</p>
+          <button>Add to Cart</button>
+        </article>
+
+        <article class="product-card" data-category="tablet" data-price="500">
+          <img src="https://images.unsplash.com/photo-1585790050230-5dd28404ccb9?w=500" alt="Tablet device" />
+          <h3>Galaxy Tab</h3>
+          <p class="price">$500</p>
+          <button>Add to Cart</button>
+        </article>
+
+        <article class="product-card" data-category="accessory" data-price="120">
+          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500" alt="Headphones" />
+          <h3>Wireless Headphones</h3>
+          <p class="price">$120</p>
+          <button>Add to Cart</button>
+        </article>
+
+        <article class="product-card" data-category="accessory" data-price="80">
+          <img src="https://images.unsplash.com/photo-1580894894513-541e068a3e2b?w=500" alt="Keyboard" />
+          <h3>Mechanical Keyboard</h3>
+          <p class="price">$80</p>
+          <button>Add to Cart</button>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2026 TechMatch. All Rights Reserved.</p>
+      <p>Email: support@techmatch.com | Phone: +966 500000000</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
