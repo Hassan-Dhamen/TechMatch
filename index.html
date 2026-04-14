@@ -12,26 +12,25 @@
 </head>
 <body>
 
-  <!-- Header -->
   <header>
     <nav class="navbar">
       <div class="logo">TechMatch</div>
 
       <ul class="nav-links">
-        <li><a href="#">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="#products">Products</a></li>
         <li><a href="#">Categories</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+        <li><a href="pages/cart.html">Cart</a></li>
       </ul>
 
-      <div class="cart-icon" aria-label="Shopping cart">
+      <a href="pages/cart.html" class="cart-icon" aria-label="Shopping cart">
         <i class="fa-solid fa-cart-shopping"></i>
         <span class="cart-count">2</span>
-      </div>
+      </a>
     </nav>
   </header>
 
-  <!-- Hero Section -->
   <section class="hero">
     <div class="hero-text">
       <h1>Smart Electronics Store</h1>
@@ -40,10 +39,7 @@
     </div>
   </section>
 
-  <!-- Main Content -->
   <main class="container" id="products">
-
-    <!-- Filter Sidebar -->
     <aside class="sidebar" aria-label="Product filters">
       <h2>Filter Products</h2>
 
@@ -64,80 +60,130 @@
       </div>
 
       <div class="filter-group">
-        <label for="price">Max Price: <span id="priceValue">$3000</span></label>
-        <input type="range" id="price" min="50" max="3000" value="3000" step="50" />
+        <label for="price">Max Price: <span id="priceValue">$8000</span></label>
+        <input type="range" id="price" min="100" max="8000" value="8000" step="100" />
       </div>
 
       <button class="clear-btn" id="clearFilters">Clear Filters</button>
     </aside>
 
-    <!-- Product Section -->
     <section class="products-section">
       <h2>Featured Products</h2>
 
       <div class="products-grid" id="productsGrid">
 
-        <article class="product-card" data-category="phone" data-price="999">
-          <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500" alt="Smartphone" />
-          <h3>iPhone 14</h3>
-          <p class="price">$999</p>
-          <button>Add to Cart</button>
+        <article class="product-card" data-category="laptop" data-price="7499">
+          <img src="images/products/macpro.jpg" alt="MacBook Pro 14" />
+          <h3>MacBook Pro 14</h3>
+          <p class="price">$7499</p>
+          <button onclick="location.href='pages/product.html'" aria-label="View MacBook Pro 14 details">
+            View Details
+          </button>
         </article>
 
-        <article class="product-card" data-category="phone" data-price="850">
-          <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=500" alt="Samsung phone" />
-          <h3>Samsung S23</h3>
-          <p class="price">$850</p>
-          <button>Add to Cart</button>
+        <article class="product-card" data-category="phone" data-price="4299">
+          <img src="images/products/iphone15.jpg" alt="iPhone 15 Pro" />
+          <h3>iPhone 15 Pro</h3>
+          <p class="price">$4299</p>
+          <button onclick="location.href='pages/product.html'" aria-label="View iPhone 15 Pro details">
+            View Details
+          </button>
         </article>
 
-        <article class="product-card" data-category="laptop" data-price="2100">
-          <img src="https://images.unsplash.com/photo-1517336714739-489689fd1ca8?w=500" alt="Laptop" />
-          <h3>MacBook Pro</h3>
-          <p class="price">$2100</p>
-          <button>Add to Cart</button>
+        <article class="product-card" data-category="phone" data-price="4899">
+          <img src="images/products/s24u.jpg" alt="Samsung Galaxy S24 Ultra" />
+          <h3>Samsung Galaxy S24 Ultra</h3>
+          <p class="price">$4899</p>
+          <button onclick="location.href='pages/product.html'" aria-label="View Samsung Galaxy S24 Ultra details">
+            View Details
+          </button>
         </article>
 
-        <article class="product-card" data-category="laptop" data-price="1400">
-          <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500" alt="HP laptop" />
-          <h3>HP Pavilion</h3>
-          <p class="price">$1400</p>
-          <button>Add to Cart</button>
+        <article class="product-card" data-category="tablet" data-price="2699">
+          <img src="images/products/ipadair.jpg" alt="iPad Air M2" />
+          <h3>iPad Air M2</h3>
+          <p class="price">$2699</p>
+          <button onclick="location.href='pages/product.html'" aria-label="View iPad Air M2 details">
+            View Details
+          </button>
         </article>
 
-        <article class="product-card" data-category="tablet" data-price="700">
-          <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=500" alt="Tablet" />
-          <h3>iPad Air</h3>
-          <p class="price">$700</p>
-          <button>Add to Cart</button>
+        <article class="product-card" data-category="accessory" data-price="1250">
+          <img src="images/products/sonyh.jpg" alt="Sony WH-1000XM5" />
+          <h3>Sony WH-1000XM5</h3>
+          <p class="price">$1250</p>
+          <button onclick="location.href='pages/product.html'" aria-label="View Sony WH-1000XM5 details">
+            View Details
+          </button>
         </article>
 
-        <article class="product-card" data-category="tablet" data-price="500">
-          <img src="https://images.unsplash.com/photo-1585790050230-5dd28404ccb9?w=500" alt="Tablet device" />
-          <h3>Galaxy Tab</h3>
-          <p class="price">$500</p>
-          <button>Add to Cart</button>
+        <article class="product-card" data-category="laptop" data-price="5400">
+          <img src="images/products/dellxps.jpg" alt="Dell XPS 13" />
+          <h3>Dell XPS 13</h3>
+          <p class="price">$5400</p>
+          <button onclick="location.href='pages/product.html'" aria-label="View Dell XPS 13 details">
+            View Details
+          </button>
         </article>
 
-        <article class="product-card" data-category="accessory" data-price="120">
-          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500" alt="Headphones" />
-          <h3>Wireless Headphones</h3>
-          <p class="price">$120</p>
-          <button>Add to Cart</button>
+        <article class="product-card" data-category="accessory" data-price="1750">
+          <img src="images/products/watch9.jpg" alt="Apple Watch Series 9" />
+          <h3>Apple Watch Series 9</h3>
+          <p class="price">$1750</p>
+          <button onclick="location.href='pages/product.html'" aria-label="View Apple Watch Series 9 details">
+            View Details
+          </button>
         </article>
 
-        <article class="product-card" data-category="accessory" data-price="80">
-          <img src="https://images.unsplash.com/photo-1580894894513-541e068a3e2b?w=500" alt="Keyboard" />
-          <h3>Mechanical Keyboard</h3>
-          <p class="price">$80</p>
-          <button>Add to Cart</button>
+        <article class="product-card" data-category="accessory" data-price="420">
+          <img src="images/products/logimouse.jpg" alt="Logitech MX Master 3S" />
+          <h3>Logitech MX Master 3S</h3>
+          <p class="price">$420</p>
+          <button onclick="location.href='pages/product.html'" aria-label="View Logitech MX Master 3S details">
+            View Details
+          </button>
+        </article>
+
+        <article class="product-card" data-category="laptop" data-price="4900">
+          <img src="images/products/hpspectre.jpg" alt="HP Spectre x360" />
+          <h3>HP Spectre x360</h3>
+          <p class="price">$4900</p>
+          <button onclick="location.href='pages/product.html'" aria-label="View HP Spectre x360 details">
+            View Details
+          </button>
+        </article>
+
+        <article class="product-card" data-category="phone" data-price="3200">
+          <img src="images/products/pixel8.jpg" alt="Google Pixel 8 Pro" />
+          <h3>Google Pixel 8 Pro</h3>
+          <p class="price">$3200</p>
+          <button onclick="location.href='pages/product.html'" aria-label="View Google Pixel 8 Pro details">
+            View Details
+          </button>
+        </article>
+
+        <article class="product-card" data-category="accessory" data-price="940">
+          <img src="images/products/airpods.jpg" alt="AirPods Pro 2nd Gen" />
+          <h3>AirPods Pro (2nd Gen)</h3>
+          <p class="price">$940</p>
+          <button onclick="location.href='pages/product.html'" aria-label="View AirPods Pro details">
+            View Details
+          </button>
+        </article>
+
+        <article class="product-card" data-category="laptop" data-price="3800">
+          <img src="images/products/surface.jpg" alt="Microsoft Surface Pro 9" />
+          <h3>Microsoft Surface Pro 9</h3>
+          <p class="price">$3800</p>
+          <button onclick="location.href='pages/product.html'" aria-label="View Microsoft Surface Pro 9 details">
+            View Details
+          </button>
         </article>
 
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer>
     <div class="footer-content">
       <p>&copy; 2026 TechMatch. All Rights Reserved.</p>
