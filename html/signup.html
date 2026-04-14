@@ -5,94 +5,108 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sign Up - TechMatch</title>
 
-  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/login.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Syne:wght@700;800&display=swap"
+    rel="stylesheet"
+  />
 </head>
 <body>
-  <a href="../index.html" class="back-btn">← Back</a>
-
 <header>
   <nav class="navbar">
-
     <a href="../index.html" class="logo">Tech<span>Match</span></a>
 
     <ul class="nav-links">
       <li><a href="../index.html">Home</a></li>
-      <li><a href="../index.html#products">Products</a></li>
-      <li><a href="product.html">Browse</a></li>
+      <li><a href="product.html">Products</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="profile.html">Profile</a></li>
     </ul>
 
     <div class="nav-actions">
       <a href="login.html" class="btn-nav btn-nav-outline">Login</a>
-
       <a href="cart.html" class="cart-icon">
         <i class="fa-solid fa-cart-shopping"></i>
         <span class="cart-count">2</span>
       </a>
     </div>
-
   </nav>
 </header>
 
-<!-- ✅ نفس كلاسات اللوقن -->
 <main class="login-wrapper">
   <div class="login-box">
-
     <h1>Sign Up</h1>
     <p>Create your TechMatch account</p>
 
     <form class="login-form">
-
       <div>
-        <label>Full Name</label>
-        <input type="text" placeholder="Enter your name" required>
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" placeholder="Enter your name" required>
       </div>
 
       <div>
-        <label>Email Address</label>
-        <input type="email" placeholder="Enter your email" required>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
       </div>
 
       <div>
-        <label>Phone</label>
-        <input type="text" placeholder="Enter phone number">
+        <label for="phone">Phone</label>
+        <input type="text" id="phone" placeholder="Enter phone number">
       </div>
 
       <div>
-        <label>Password</label>
-        <input type="password" placeholder="Enter password" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter password" required>
       </div>
 
       <div>
-        <label>Confirm Password</label>
-        <input type="password" placeholder="Confirm password" required>
-      </div>
-
-      <div>
-        <label>Account Type</label>
-        <select>
-          <option value="customer">Customer</option>
-          <option value="admin">Admin</option>
-        </select>
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" placeholder="Confirm password" required>
       </div>
 
       <button type="submit">Sign Up</button>
-
     </form>
 
     <div class="login-links">
       <p>Already have an account?</p>
       <a href="login.html">Login</a>
     </div>
-
   </div>
 </main>
 
 <footer>
-  <div class="footer-content">
-    <p>&copy; 2026 TechMatch. All Rights Reserved.</p>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo-footer">Tech<span>Match</span></div>
+      <p>Your destination for modern electronics and smart shopping.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="#">techmatch@university.edu</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 TechMatch. All rights reserved.</p>
+    <p>Designed for Web Application Project</p>
   </div>
 </footer>
 
