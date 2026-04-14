@@ -1,7 +1,211 @@
-<h3>Specifications</h3>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products - TechMatch</title>
 
-<ul class="specs">
-<li>RAM: 8GB</li>
-<li>Storage: 256GB</li>
-<li>Battery: 4000mAh</li>
-</ul>
+  <link rel="stylesheet" href="../css/product.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="../index.html" class="logo">Tech<span>Match</span></a>
+
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn-nav btn-nav-outline">Sign In</a>
+        <a href="cart.html" class="cart-icon" aria-label="Shopping cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-count">2</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <span class="page-eyebrow"><span></span> Smart Shopping</span>
+      <h1>Explore Our <em>Products</em></h1>
+      <p>
+        Browse the latest laptops, phones, tablets, and accessories with a clean,
+        modern shopping experience.
+      </p>
+    </div>
+  </section>
+
+  <main class="container">
+    <aside class="sidebar">
+      <h2>Filter Products</h2>
+
+      <div class="filter-group">
+        <label for="search">Search</label>
+        <input type="text" id="search" placeholder="Search product..." />
+      </div>
+
+      <div class="filter-group">
+        <label for="category">Category</label>
+        <select id="category">
+          <option>All Categories</option>
+          <option>Phones</option>
+          <option>Laptops</option>
+          <option>Tablets</option>
+          <option>Accessories</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <div class="price-display">
+          <label for="price">Max Price</label>
+          <span class="price-badge">$1500</span>
+        </div>
+        <input type="range" id="price" min="100" max="1500" value="1500" />
+      </div>
+
+      <button class="clear-btn">Clear Filters</button>
+    </aside>
+
+    <section class="products-section">
+      <h2>Available Products</h2>
+
+      <div class="products-grid">
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="../images/products/iphone.jpg" alt="iPhone 15 Pro" />
+            <span class="product-badge phone">Phone</span>
+          </div>
+          <div class="product-info">
+            <h3>iPhone 15 Pro</h3>
+            <p class="price">$999 <small>Best Seller</small></p>
+            <div class="product-actions">
+              <button class="btn-view">View Details</button>
+              <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="../images/products/macbook.jpg" alt="MacBook Air M3" />
+            <span class="product-badge laptop">Laptop</span>
+          </div>
+          <div class="product-info">
+            <h3>MacBook Air M3</h3>
+            <p class="price">$1299 <small>New Arrival</small></p>
+            <div class="product-actions">
+              <button class="btn-view">View Details</button>
+              <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="../images/products/ipad.jpg" alt="iPad Pro" />
+            <span class="product-badge tablet">Tablet</span>
+          </div>
+          <div class="product-info">
+            <h3>iPad Pro</h3>
+            <p class="price">$899 <small>Top Rated</small></p>
+            <div class="product-actions">
+              <button class="btn-view">View Details</button>
+              <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="../images/products/airpods.jpg" alt="AirPods Pro" />
+            <span class="product-badge accessory">Accessory</span>
+          </div>
+          <div class="product-info">
+            <h3>AirPods Pro</h3>
+            <p class="price">$249 <small>Popular</small></p>
+            <div class="product-actions">
+              <button class="btn-view">View Details</button>
+              <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="../images/products/samsung.jpg" alt="Samsung Galaxy S24" />
+            <span class="product-badge phone">Phone</span>
+          </div>
+          <div class="product-info">
+            <h3>Samsung Galaxy S24</h3>
+            <p class="price">$899 <small>Trending</small></p>
+            <div class="product-actions">
+              <button class="btn-view">View Details</button>
+              <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="../images/products/headphones.jpg" alt="Sony Headphones" />
+            <span class="product-badge accessory">Accessory</span>
+          </div>
+          <div class="product-info">
+            <h3>Sony WH-1000XM5</h3>
+            <p class="price">$399 <small>Premium</small></p>
+            <div class="product-actions">
+              <button class="btn-view">View Details</button>
+              <button class="btn-wishlist"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-footer">Tech<span>Match</span></div>
+        <p>Your destination for modern electronics and smart shopping.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="contact.html">Support</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="#">support@techmatch.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 TechMatch. All rights reserved.</p>
+      <p>Designed for Web Application Project</p>
+    </div>
+  </footer>
+</body>
+</html>
