@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout - TechMatch</title>
+
+  <link rel="stylesheet" href="../css/cart.css" />
+  <link rel="stylesheet" href="../css/checkout.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a href="cart.html" class="back-btn">← Back to Cart</a>
+
+  <header>
+    <nav class="navbar">
+      <a href="../index.html" class="logo">Tech<span>Match</span></a>
+
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="account.html" class="btn-nav btn-nav-outline">Account</a>
+
+        <a href="cart.html" class="cart-icon">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-count">2</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <span class="page-eyebrow"><span></span> Final Step</span>
+      <h1>Complete Your <em>Order</em></h1>
+      <p>
+        Enter your shipping address, select your preferred payment method, and
+        review your order before confirming your purchase.
+      </p>
+    </div>
+  </section>
+
+  <main class="checkout-container">
+
+    <section class="checkout-main">
+
+      <article class="checkout-card">
+        <div class="section-title">
+          <div class="step-badge">1</div>
+          <div>
+            <h2>Shipping Address</h2>
+            <p>Where should we deliver your order?</p>
+          </div>
+        </div>
+
+        <form class="checkout-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullname">Full Name</label>
+              <input type="text" id="fullname" placeholder="Enter your full name" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" placeholder="+966 5XXXXXXXX" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="your@email.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="address">Street Address</label>
+            <input type="text" id="address" placeholder="Building, street, district" required />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="city">City</label>
+              <input type="text" id="city" placeholder="Dammam" required />
+            </div>
+            <div class="form-group">
+              <label for="postal">Postal Code</label>
+              <input type="text" id="postal" placeholder="31952" required />
+            </div>
+            <div class="form-group">
+              <label for="country">Country</label>
+              <select id="country" required>
+                <option value="SA">Saudi Arabia</option>
+                <option value="AE">United Arab Emirates</option>
+                <option value="KW">Kuwait</option>
+                <option value="BH">Bahrain</option>
+                <option value="QA">Qatar</option>
+                <option value="OM">Oman</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="notes">Delivery Notes (Optional)</label>
+            <textarea id="notes" placeholder="Any specific instructions for delivery..."></textarea>
+          </div>
+        </form>
+      </article>
+
+      <article class="checkout-card">
+        <div class="section-title">
+          <div class="step-badge">2</div>
+          <div>
+            <h2>Shipping Method</h2>
+            <p>Choose your preferred delivery speed.</p>
+          </div>
+        </div>
+
+        <div class="shipping-options">
+          <label class="shipping-option">
+            <input type="radio" name="shipping" value="standard" checked />
+            <div class="option-content">
+              <div class="option-header">
+                <span class="option-icon"><i class="fa-solid fa-truck"></i></span>
+                <div>
+                  <h3>Standard Shipping</h3>
+                  <p>3–5 business days</p>
+                </div>
+              </div>
+              <span class="option-price free">Free</span>
+            </div>
+          </label>
+
+          <label class="shipping-option">
+            <input type="radio" name="shipping" value="express" />
+            <div class="option-content">
+              <div class="option-header">
+                <span class="option-icon"><i class="fa-solid fa-bolt"></i></span>
+                <div>
+                  <h3>Express Shipping</h3>
+                  <p>1–2 business days</p>
+                </div>
+              </div>
+              <span class="option-price">$20</span>
+            </div>
+          </label>
+
+          <label class="shipping-option">
+            <input type="radio" name="shipping" value="sameday" />
+            <div class="option-content">
+              <div class="option-header">
+                <span class="option-icon"><i class="fa-solid fa-rocket"></i></span>
+                <div>
+                  <h3>Same-Day Delivery</h3>
+                  <p>Within 6 hours (selected cities)</p>
+                </div>
+              </div>
+              <span class="option-price">$40</span>
+            </div>
+          </label>
+        </div>
+      </article>
+
+      <article class="checkout-card">
+        <div class="section-title">
+          <div class="step-badge">3</div>
+          <div>
+            <h2>Payment Method</h2>
+            <p>How would you like to pay?</p>
+          </div>
+        </div>
+
+        <div class="payment-methods">
+          <label class="payment-option">
+            <input type="radio" name="payment" value="card" checked />
+            <div class="payment-header">
+              <span class="payment-icon card-icon">
+                <i class="fa-solid fa-credit-card"></i>
+              </span>
+              <div class="payment-text">
+                <h3>Credit / Debit Card</h3>
+                <p>Visa, Mastercard, Mada</p>
+              </div>
+              <div class="payment-logos">
+                <i class="fa-brands fa-cc-visa"></i>
+                <i class="fa-brands fa-cc-mastercard"></i>
+              </div>
+            </div>
+
+            <div class="card-details">
+              <div class="form-group">
+                <label for="card-number">Card Number</label>
+                <input type="text" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19" />
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="card-name">Name on Card</label>
+                  <input type="text" id="card-name" placeholder="John Doe" />
+                </div>
+                <div class="form-group">
+                  <label for="expiry">Expiry Date</label>
+                  <input type="text" id="expiry" placeholder="MM/YY" maxlength="5" />
+                </div>
+                <div class="form-group">
+                  <label for="cvv">CVV</label>
+                  <input type="text" id="cvv" placeholder="123" maxlength="4" />
+                </div>
+              </div>
+            </div>
+          </label>
+
+          <label class="payment-option">
+            <input type="radio" name="payment" value="applepay" />
+            <div class="payment-header">
+              <span class="payment-icon apple-icon">
+                <i class="fa-brands fa-apple-pay"></i>
+              </span>
+              <div class="payment-text">
+                <h3>Apple Pay</h3>
+                <p>Fast and secure checkout with Touch ID</p>
+              </div>
+            </div>
+          </label>
+
+          <label class="payment-option">
+            <input type="radio" name="payment" value="cod" />
+            <div class="payment-header">
+              <span class="payment-icon cash-icon">
+                <i class="fa-solid fa-money-bill-wave"></i>
+              </span>
+              <div class="payment-text">
+                <h3>Cash on Delivery</h3>
+                <p>Pay with cash when your order arrives</p>
+              </div>
+              <span class="extra-fee">+$5 fee</span>
+            </div>
+          </label>
+        </div>
+      </article>
+
+      <article class="checkout-card">
+        <div class="section-title">
+          <div class="step-badge">4</div>
+          <div>
+            <h2>Review Your Order</h2>
+            <p>Make sure everything looks good.</p>
+          </div>
+        </div>
+
+        <div class="review-items">
+          <div class="review-item">
+            <div class="review-image">
+              <img src="../images/products/iphone15.jpg" alt="iPhone 15 Pro" />
+            </div>
+            <div class="review-details">
+              <h4>iPhone 15 Pro</h4>
+              <p>Qty: 1 × $999</p>
+            </div>
+            <div class="review-price">$999</div>
+          </div>
+
+          <div class="review-item">
+            <div class="review-image">
+              <img src="../images/products/airpods.jpg" alt="AirPods Pro" />
+            </div>
+            <div class="review-details">
+              <h4>AirPods Pro (2nd Gen)</h4>
+              <p>Qty: 1 × $249</p>
+            </div>
+            <div class="review-price">$249</div>
+          </div>
+        </div>
+
+        <div class="terms-check">
+          <label>
+            <input type="checkbox" required />
+            <span>I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a></span>
+          </label>
+        </div>
+      </article>
+
+    </section>
+
+    <aside class="checkout-summary">
+      <div class="summary-card">
+        <h2>Order Summary</h2>
+
+        <div class="summary-items">
+          <div class="summary-item-row">
+            <span>iPhone 15 Pro</span>
+            <span>$999</span>
+          </div>
+          <div class="summary-item-row">
+            <span>AirPods Pro</span>
+            <span>$249</span>
+          </div>
+        </div>
+
+        <div class="summary-divider"></div>
+
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span>$1,248.00</span>
+        </div>
+
+        <div class="summary-row">
+          <span>Shipping</span>
+          <span id="shipping-cost">Free</span>
+        </div>
+
+        <div class="summary-row">
+          <span>Tax (VAT 15%)</span>
+          <span>$187.20</span>
+        </div>
+
+        <div class="summary-divider"></div>
+
+        <div class="summary-total">
+          <span>Total</span>
+          <span>$1,435.20</span>
+        </div>
+
+        <button type="submit" class="place-order-btn">
+          <i class="fa-solid fa-lock"></i>
+          Place Order
+        </button>
+
+        <div class="secure-badge">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>Secure Checkout – SSL Encrypted</span>
+        </div>
+
+        <div class="trust-icons">
+          <i class="fa-brands fa-cc-visa"></i>
+          <i class="fa-brands fa-cc-mastercard"></i>
+          <i class="fa-brands fa-apple-pay"></i>
+          <i class="fa-solid fa-money-bill-wave"></i>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-footer">Tech<span>Match</span></div>
+        <p>Your destination for modern electronics and smart shopping.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="account.html">Account</a></li>
+          <li><a href="#">techmatch@university.edu</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 TechMatch. All rights reserved.</p>
+      <p>Designed for Web Application Project</p>
+    </div>
+  </footer>
+</body>
+</html>
