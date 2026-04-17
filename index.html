@@ -83,20 +83,18 @@
           <option value="accessory">Accessories</option>
         </select>
       </div>
-
       <div class="filter-group">
-        <label for="brand">Brand</label>
-        <select id="brand">
-          <option>All Brands</option>
-          <option>Apple</option>
-          <option>Samsung</option>
-          <option>Huawei</option>
-          <option>Sony</option>
-          <option>Dell</option>
-          <option>Lenovo</option>
-        </select>
-      </div>
-
+  <label for="brand">Brand</label>
+  <select id="brand">
+    <option>All Brands</option>
+    <option>Apple</option>
+    <option>Samsung</option>
+    <option>Huawei</option>
+    <option>Sony</option>
+    <option>Dell</option>
+    <option>Lenovo</option>
+  </select>
+</div>
       <div class="filter-group">
         <div class="price-display">
           <label for="price">Max Price</label>
@@ -105,7 +103,7 @@
         <input type="range" id="price" min="100" max="8000" value="8000" step="100" />
       </div>
 
-      <button class="clear-btn" id="clearFilters" type="button">
+      <button class="clear-btn" id="clearFilters">
         <i class="fa-solid fa-rotate-left"></i> Clear Filters
       </button>
     </aside>
@@ -124,8 +122,8 @@
             <h3>MacBook Pro 14</h3>
             <p class="price">$7,499 <small>incl. VAT</small></p>
             <div class="product-actions">
-              <button class="btn-view" type="button" onclick="goToProduct('macbook-pro-14')">View Details</button>
-              <button class="btn-wishlist" type="button" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="btn-view" onclick="goToProduct('macbook-pro-14')">View Details</button>
+              <button class="btn-wishlist" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
             </div>
           </div>
         </article>
@@ -139,8 +137,8 @@
             <h3>iPhone 15 Pro</h3>
             <p class="price">$4,299 <small>incl. VAT</small></p>
             <div class="product-actions">
-              <button class="btn-view" type="button" onclick="goToProduct('iphone-15-pro')">View Details</button>
-              <button class="btn-wishlist" type="button" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="btn-view" onclick="goToProduct('iphone-15-pro')">View Details</button>
+              <button class="btn-wishlist" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
             </div>
           </div>
         </article>
@@ -154,8 +152,8 @@
             <h3>Samsung Galaxy S24 Ultra</h3>
             <p class="price">$4,899 <small>incl. VAT</small></p>
             <div class="product-actions">
-              <button class="btn-view" type="button" onclick="goToProduct('samsung-s24-ultra')">View Details</button>
-              <button class="btn-wishlist" type="button" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="btn-view" onclick="goToProduct('samsung-s24-ultra')">View Details</button>
+              <button class="btn-wishlist" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
             </div>
           </div>
         </article>
@@ -169,8 +167,8 @@
             <h3>iPad Air M2</h3>
             <p class="price">$2,699 <small>incl. VAT</small></p>
             <div class="product-actions">
-              <button class="btn-view" type="button" onclick="goToProduct('ipad-air-m2')">View Details</button>
-              <button class="btn-wishlist" type="button" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="btn-view" onclick="goToProduct('ipad-air-m2')">View Details</button>
+              <button class="btn-wishlist" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
             </div>
           </div>
         </article>
@@ -184,8 +182,8 @@
             <h3>Sony WH-1000XM5</h3>
             <p class="price">$1,250 <small>incl. VAT</small></p>
             <div class="product-actions">
-              <button class="btn-view" type="button" onclick="goToProduct('sony-wh1000xm5')">View Details</button>
-              <button class="btn-wishlist" type="button" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="btn-view" onclick="goToProduct('sony-wh1000xm5')">View Details</button>
+              <button class="btn-wishlist" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
             </div>
           </div>
         </article>
@@ -199,8 +197,8 @@
             <h3>Dell XPS 13</h3>
             <p class="price">$5,400 <small>incl. VAT</small></p>
             <div class="product-actions">
-              <button class="btn-view" type="button" onclick="goToProduct('dell-xps-13')">View Details</button>
-              <button class="btn-wishlist" type="button" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="btn-view" onclick="goToProduct('dell-xps-13')">View Details</button>
+              <button class="btn-wishlist" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
             </div>
           </div>
         </article>
@@ -214,8 +212,8 @@
             <h3>Apple Watch Series 9</h3>
             <p class="price">$1,750 <small>incl. VAT</small></p>
             <div class="product-actions">
-              <button class="btn-view" type="button" onclick="goToProduct('apple-watch-s9')">View Details</button>
-              <button class="btn-wishlist" type="button" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="btn-view" onclick="goToProduct('apple-watch-s9')">View Details</button>
+              <button class="btn-wishlist" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
             </div>
           </div>
         </article>
@@ -229,8 +227,8 @@
             <h3>Logitech MX Master 3S</h3>
             <p class="price">$420 <small>incl. VAT</small></p>
             <div class="product-actions">
-              <button class="btn-view" type="button" onclick="goToProduct('logitech-mx-master')">View Details</button>
-              <button class="btn-wishlist" type="button" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="btn-view" onclick="goToProduct('logitech-mx-master')">View Details</button>
+              <button class="btn-wishlist" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
             </div>
           </div>
         </article>
@@ -244,8 +242,8 @@
             <h3>HP Spectre x360</h3>
             <p class="price">$4,900 <small>incl. VAT</small></p>
             <div class="product-actions">
-              <button class="btn-view" type="button" onclick="goToProduct('hp-spectre-x360')">View Details</button>
-              <button class="btn-wishlist" type="button" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="btn-view" onclick="goToProduct('hp-spectre-x360')">View Details</button>
+              <button class="btn-wishlist" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
             </div>
           </div>
         </article>
@@ -259,8 +257,8 @@
             <h3>Google Pixel 8 Pro</h3>
             <p class="price">$3,200 <small>incl. VAT</small></p>
             <div class="product-actions">
-              <button class="btn-view" type="button" onclick="goToProduct('google-pixel-8-pro')">View Details</button>
-              <button class="btn-wishlist" type="button" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="btn-view" onclick="goToProduct('google-pixel-8-pro')">View Details</button>
+              <button class="btn-wishlist" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
             </div>
           </div>
         </article>
@@ -274,8 +272,8 @@
             <h3>AirPods Pro (2nd Gen)</h3>
             <p class="price">$940 <small>incl. VAT</small></p>
             <div class="product-actions">
-              <button class="btn-view" type="button" onclick="goToProduct('airpods-pro-2')">View Details</button>
-              <button class="btn-wishlist" type="button" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="btn-view" onclick="goToProduct('airpods-pro-2')">View Details</button>
+              <button class="btn-wishlist" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
             </div>
           </div>
         </article>
@@ -289,8 +287,8 @@
             <h3>Microsoft Surface Pro 9</h3>
             <p class="price">$3,800 <small>incl. VAT</small></p>
             <div class="product-actions">
-              <button class="btn-view" type="button" onclick="goToProduct('surface-pro-9')">View Details</button>
-              <button class="btn-wishlist" type="button" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="btn-view" onclick="goToProduct('surface-pro-9')">View Details</button>
+              <button class="btn-wishlist" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
             </div>
           </div>
         </article>
@@ -305,7 +303,6 @@
         <div class="logo-footer">Tech<span>Match</span></div>
         <p>Smart electronics, curated for people who care about quality.</p>
       </div>
-
       <div class="footer-col">
         <h4>Shop</h4>
         <ul>
@@ -315,7 +312,6 @@
           <li><a href="#">Accessories</a></li>
         </ul>
       </div>
-
       <div class="footer-col">
         <h4>Company</h4>
         <ul>
@@ -326,7 +322,6 @@
         </ul>
       </div>
     </div>
-
     <div class="footer-bottom">
       <p>&copy; 2026 TechMatch. All rights reserved.</p>
       <p>support@techmatch.com &nbsp;·&nbsp; +966 500 000 000</p>
@@ -334,5 +329,10 @@
   </footer>
 
   <script src="js/index.js"></script>
+  <script>
+    function goToProduct(productId) {
+      window.location.href = 'html/product.html?id=' + productId;
+    }
+  </script>
 </body>
 </html>
