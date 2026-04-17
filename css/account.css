@@ -1,7 +1,7 @@
 .account-container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem 2rem 4rem;
+  padding: 3rem 2rem 4rem;
 }
 
 .tabs-nav {
@@ -11,7 +11,7 @@
   border: 1px solid var(--gray-200);
   border-radius: 20px;
   padding: 0.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   box-shadow: 0 10px 30px rgba(10, 10, 10, 0.04);
   overflow-x: auto;
 }
@@ -33,10 +33,6 @@
   cursor: pointer;
   transition: all 0.2s ease;
   white-space: nowrap;
-}
-
-.tab-btn i {
-  font-size: 0.95rem;
 }
 
 .tab-btn:hover {
@@ -159,7 +155,6 @@
   box-shadow: 0 0 0 4px rgba(10, 10, 10, 0.06);
 }
 
-.input-with-icon input:focus + i,
 .input-with-icon:focus-within i {
   color: var(--black);
 }
@@ -200,7 +195,10 @@
   text-decoration: none;
 }
 
-.checkbox-label a:hover {
+.checkbox-label a:hover,
+.forgot-link:hover,
+.form-footer a:hover,
+.view-all:hover {
   text-decoration: underline;
 }
 
@@ -208,11 +206,6 @@
   color: var(--black);
   font-weight: 500;
   text-decoration: none;
-  transition: color 0.18s;
-}
-
-.forgot-link:hover {
-  color: var(--gray-600);
 }
 
 .submit-btn {
@@ -279,10 +272,6 @@
   margin-left: 0.25rem;
 }
 
-.form-footer a:hover {
-  text-decoration: underline;
-}
-
 .info-box {
   display: flex;
   align-items: flex-start;
@@ -307,6 +296,7 @@
   line-height: 1.5;
 }
 
+/* PROFILE LAYOUT */
 .profile-layout {
   display: grid;
   grid-template-columns: 320px 1fr;
@@ -466,6 +456,7 @@
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--black);
+  margin: 0;
 }
 
 .edit-btn {
@@ -499,10 +490,6 @@
   transition: color 0.18s;
 }
 
-.view-all:hover {
-  color: var(--black);
-}
-
 .orders-list {
   display: flex;
   flex-direction: column;
@@ -511,7 +498,7 @@
 
 .order-row {
   display: grid;
-  grid-template-columns: auto 1fr auto auto;
+  grid-template-columns: 120px 1fr 110px 140px;
   align-items: center;
   gap: 1rem;
   padding: 1rem 1.1rem;
@@ -528,7 +515,6 @@
   display: flex;
   flex-direction: column;
   gap: 2px;
-  min-width: 100px;
 }
 
 .order-id {
@@ -554,11 +540,13 @@
   font-weight: 700;
   font-size: 0.95rem;
   color: var(--black);
+  text-align: right;
 }
 
 .order-status {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 5px;
   padding: 5px 11px;
   border-radius: 100px;
@@ -602,7 +590,11 @@
 
   .order-row {
     grid-template-columns: 1fr;
-    gap: 0.5rem;
+    gap: 0.6rem;
+  }
+
+  .order-total {
+    text-align: left;
   }
 
   .order-status {
@@ -644,6 +636,11 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 0.75rem;
+  }
+
+  .card-head {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
