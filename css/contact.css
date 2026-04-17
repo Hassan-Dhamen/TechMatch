@@ -255,6 +255,29 @@
   display: block;
 }
 
+.map-actions {
+  margin-top: 1rem;
+  text-align: right;
+}
+
+.btn-directions {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  background: var(--black);
+  color: var(--white);
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.btn-directions:hover {
+  background: var(--gray-800);
+  transform: translateY(-1px);
+}
+
 @media (max-width: 900px) {
   .contact-grid {
     grid-template-columns: 1fr;
@@ -279,26 +302,4 @@
   .map-frame {
     height: 280px;
   }
-}
-.map-actions {
-  margin-top: 1rem;
-  text-align: right;
-}
-
-.btn-directions {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 18px;
-  background: var(--black);
-  color: var(--white);
-  border-radius: 999px;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: all 0.2s;
-}
-
-.btn-directions:hover {
-  background: var(--gray-800);
-  transform: translateY(-1px);
 }
