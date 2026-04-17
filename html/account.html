@@ -43,33 +43,24 @@
     </nav>
   </header>
 
-  <section class="page-hero">
-    <div class="page-hero-content">
-      <span class="page-eyebrow"><span></span> Account Center</span>
-      <h1>My <em>Account</em></h1>
-      <p>
-        Manage your TechMatch account in one place. Sign in, create a new account,
-        reset your password, or update your profile information.
-      </p>
-    </div>
-  </section>
+
 
   <main class="account-container">
 
     <div class="tabs-nav">
-      <button class="tab-btn active" data-tab="login">
+      <button class="tab-btn active" data-tab="login" type="button">
         <i class="fa-solid fa-right-to-bracket"></i>
         <span>Login</span>
       </button>
-      <button class="tab-btn" data-tab="signup">
+      <button class="tab-btn" data-tab="signup" type="button">
         <i class="fa-solid fa-user-plus"></i>
         <span>Sign Up</span>
       </button>
-      <button class="tab-btn" data-tab="reset">
+      <button class="tab-btn" data-tab="reset" type="button">
         <i class="fa-solid fa-key"></i>
         <span>Reset Password</span>
       </button>
-      <button class="tab-btn" data-tab="profile">
+      <button class="tab-btn" data-tab="profile" type="button">
         <i class="fa-solid fa-user"></i>
         <span>Profile</span>
       </button>
@@ -240,7 +231,7 @@
             <div class="avatar-circle">
               <i class="fa-solid fa-user"></i>
             </div>
-            <button class="avatar-edit" title="Change photo">
+            <button class="avatar-edit" title="Change photo" type="button">
               <i class="fa-solid fa-camera"></i>
             </button>
           </div>
@@ -260,7 +251,7 @@
             </div>
           </div>
 
-          <button class="logout-btn">
+          <button class="logout-btn" type="button">
             <i class="fa-solid fa-right-from-bracket"></i>
             Logout
           </button>
@@ -271,7 +262,7 @@
           <div class="tab-card">
             <div class="card-head">
               <h2>Personal Information</h2>
-              <button class="edit-btn">
+              <button class="edit-btn" type="button">
                 <i class="fa-solid fa-pen"></i>
                 Edit
               </button>
@@ -402,30 +393,6 @@
     </div>
   </footer>
 
-  <script>
-    function switchTab(tabName) {
-      document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.classList.remove('active');
-      });
-      document.querySelectorAll('.tab-content').forEach(content => {
-        content.classList.remove('active');
-      });
-
-      const activeBtn = document.querySelector(`.tab-btn[data-tab="${tabName}"]`);
-      const activeContent = document.getElementById(`tab-${tabName}`);
-
-      if (activeBtn) activeBtn.classList.add('active');
-      if (activeContent) activeContent.classList.add('active');
-
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    document.querySelectorAll('.tab-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const tabName = btn.dataset.tab;
-        switchTab(tabName);
-      });
-    });
-  </script>
+  <script src="../js/account.js"></script>
 </body>
 </html>
