@@ -12,25 +12,22 @@
 <body>
   <header>
     <nav class="navbar">
-
   <a href="../index.html" class="logo">Tech<span>Match</span></a>
 
   <ul class="nav-links">
     <li><a href="../index.html">Home</a></li>
     <li><a href="product.html">Products</a></li>
+    <li><a href="compare.html">Compare</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 
   <div class="nav-actions">
-    <a href="login.html" class="btn-nav btn-nav-outline">Login</a>
-    <a href="signup.html" class="btn-nav btn-nav-primary">Sign Up</a>
-
+    <a href="account.html" class="btn-nav btn-nav-outline">Account</a>
     <a href="cart.html" class="cart-icon">
       <i class="fa-solid fa-cart-shopping"></i>
       <span class="cart-count">2</span>
     </a>
   </div>
-
 </nav>
   </header>
 
@@ -42,7 +39,7 @@
   <!-- SUGGESTIONS SECTION -->
   <section class="suggestions-section" id="suggestionsSection">
     <div class="suggestions-inner">
-      <h2 class="suggestions-title">You Might Also Like</h2>
+      <h2 class="suggestions-title">Frequently Bought Together</h2>
       <div class="suggestions-grid" id="suggestionsGrid"></div>
     </div>
   </section>
@@ -108,7 +105,7 @@
           { user: 'Sara M.', rating: 5, date: 'Dec 2025', text: 'Battery life is unreal. I go all day without plugging in. Best laptop I\'ve ever owned.' },
           { user: 'Omar T.', rating: 4, date: 'Nov 2025', text: 'Great machine but the price is steep. If money is no issue, go for it without hesitation.' },
         ],
-        suggestions: ['dell-xps-13', 'hp-spectre-x360', 'surface-pro-9'],
+        suggestions: ['logitech-mx-master', 'sony-wh1000xm5', 'airpods-pro-2'],
       },
       'iphone-15-pro': {
         id: 'iphone-15-pro',
@@ -170,7 +167,7 @@
           { user: 'Lina R.', rating: 4, date: 'Jan 2026', text: 'Galaxy AI features are surprisingly useful. The S Pen makes note-taking on the go so easy.' },
           { user: 'Mohammed Z.', rating: 5, date: 'Dec 2025', text: 'Best Android phone money can buy. The display is absolutely gorgeous.' },
         ],
-        suggestions: ['iphone-15-pro', 'google-pixel-8-pro', 'sony-wh1000xm5'],
+        suggestions: ['sony-wh1000xm5', 'apple-watch-s9', 'airpods-pro-2'],
       },
       'ipad-air-m2': {
         id: 'ipad-air-m2',
@@ -201,7 +198,7 @@
           { user: 'Tariq F.', rating: 4, date: 'Jan 2026', text: 'Great tablet. The 13" model is fantastic for creative work. Would love more RAM though.' },
           { user: 'Dana K.', rating: 5, date: 'Nov 2025', text: 'Beautiful display and incredibly thin. Highly recommend pairing with Apple Pencil Pro.' },
         ],
-        suggestions: ['iphone-15-pro', 'airpods-pro-2', 'apple-watch-s9'],
+        suggestions: ['iphone-15-pro', 'macbook-pro-14', 'logitech-mx-master'],
       },
       'sony-wh1000xm5': {
         id: 'sony-wh1000xm5',
@@ -232,7 +229,7 @@
           { user: 'Hind S.', rating: 5, date: 'Dec 2025', text: 'Incredibly comfortable for long work sessions. Sound quality is rich and balanced.' },
           { user: 'Bader N.', rating: 4, date: 'Oct 2025', text: 'Almost perfect. Touch controls take getting used to, but the audio quality is exceptional.' },
         ],
-        suggestions: ['airpods-pro-2', 'apple-watch-s9', 'logitech-mx-master'],
+        suggestions: ['logitech-mx-master', 'sony-wh1000xm5', 'airpods-pro-2'],
       },
       'dell-xps-13': {
         id: 'dell-xps-13',
@@ -263,7 +260,7 @@
           { user: 'Rana F.', rating: 4, date: 'Jan 2026', text: 'Great build quality and design. Fan noise can be noticeable under heavy load.' },
           { user: 'Ali K.', rating: 5, date: 'Dec 2025', text: 'Best Windows ultrabook on the market. Fast, beautiful, and solidly built.' },
         ],
-        suggestions: ['macbook-pro-14', 'hp-spectre-x360', 'surface-pro-9'],
+        suggestions: ['macbook-pro-14', 'dell-xps-13', 'sony-wh1000xm5'],
       },
       'apple-watch-s9': {
         id: 'apple-watch-s9',
@@ -294,7 +291,7 @@
           { user: 'Nawaf R.', rating: 5, date: 'Jan 2026', text: 'Health tracking is incredibly accurate. The display is noticeably brighter outdoors.' },
           { user: 'Mona S.', rating: 4, date: 'Dec 2025', text: 'Love it overall, just wish the battery lasted more than a day with heavy use.' },
         ],
-        suggestions: ['iphone-15-pro', 'airpods-pro-2', 'ipad-air-m2'],
+        suggestions: ['logitech-mx-master', 'sony-wh1000xm5', 'airpods-pro-2'],
       },
       'logitech-mx-master': {
         id: 'logitech-mx-master',
@@ -325,7 +322,7 @@
           { user: 'Abeer H.', rating: 5, date: 'Dec 2025', text: 'MagSpeed scrolling is incredibly satisfying. I never want to go back to a regular mouse.' },
           { user: 'Salman A.', rating: 4, date: 'Nov 2025', text: 'Excellent mouse. Only downside is no left-handed version available.' },
         ],
-        suggestions: ['macbook-pro-14', 'dell-xps-13', 'hp-spectre-x360'],
+        suggestions: ['sony-wh1000xm5', 'airpods-pro-2', 'apple-watch-s9'],
       },
       'hp-spectre-x360': {
         id: 'hp-spectre-x360',
@@ -356,7 +353,7 @@
           { user: 'Hassan D.', rating: 4, date: 'Jan 2026', text: 'Premium design and great battery. The 2-in-1 form factor is genuinely useful.' },
           { user: 'Ruba N.', rating: 5, date: 'Nov 2025', text: 'Best Windows 2-in-1 on the market. Excellent build quality and performance.' },
         ],
-        suggestions: ['dell-xps-13', 'macbook-pro-14', 'surface-pro-9'],
+        suggestions: ['logitech-mx-master', 'sony-wh1000xm5', 'airpods-pro-2'],
       },
       'google-pixel-8-pro': {
         id: 'google-pixel-8-pro',
