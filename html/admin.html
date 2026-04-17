@@ -22,23 +22,23 @@
 <body>
   <header>
     <nav class="navbar">
-  <a href="../index.html" class="logo">Tech<span>Match</span></a>
+      <a href="../index.html" class="logo">Tech<span>Match</span></a>
 
-  <ul class="nav-links">
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="product.html">Products</a></li>
-    <li><a href="compare.html">Compare</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="compare.html">Compare</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
 
-  <div class="nav-actions">
-    <a href="account.html" class="btn-nav btn-nav-outline">Account</a>
-    <a href="cart.html" class="cart-icon">
-      <i class="fa-solid fa-cart-shopping"></i>
-      <span class="cart-count">2</span>
-    </a>
-  </div>
-</nav>
+      <div class="nav-actions">
+        <a href="account.html" class="btn-nav btn-nav-outline">Account</a>
+        <a href="cart.html" class="cart-icon">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-count">2</span>
+        </a>
+      </div>
+    </nav>
   </header>
 
   <section class="page-hero">
@@ -93,67 +93,71 @@
         <p>Fill in the product details to add a new item.</p>
       </div>
 
-      <div class="form-grid">
-        <div class="form-group">
-          <label>Product Name</label>
-          <input type="text" placeholder="Enter product name" />
+      <form id="admin-product-form">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="product-name">Product Name</label>
+            <input id="product-name" type="text" placeholder="Enter product name" />
+          </div>
+
+          <div class="form-group">
+            <label for="product-price">Price</label>
+            <input id="product-price" type="number" placeholder="Enter price" />
+          </div>
+
+          <div class="form-group">
+            <label for="product-stock">Stock</label>
+            <input id="product-stock" type="number" placeholder="Enter stock" />
+          </div>
+
+          <div class="form-group">
+            <label for="product-category">Category</label>
+            <select id="product-category">
+              <option value="">Select Category</option>
+              <option value="phone">Phone</option>
+              <option value="laptop">Laptop</option>
+              <option value="tablet">Tablet</option>
+              <option value="accessory">Accessory</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="product-brand">Brand</label>
+            <input id="product-brand" type="text" placeholder="Enter brand" />
+          </div>
+
+          <div class="form-group">
+            <label for="product-model">Model</label>
+            <input id="product-model" type="text" placeholder="Enter model" />
+          </div>
         </div>
 
-        <div class="form-group">
-          <label>Price</label>
-          <input type="number" placeholder="Enter price" />
+        <div class="form-group full-width">
+          <label for="product-description">Product Description</label>
+          <textarea id="product-description" placeholder="Write product description..."></textarea>
         </div>
 
-        <div class="form-group">
-          <label>Stock</label>
-          <input type="number" placeholder="Enter stock" />
+        <div class="specs-header">
+          <h3>Specifications</h3>
+          <button onclick="addSpec()" class="btn-secondary-admin" type="button">
+            + Add Specification
+          </button>
         </div>
 
-        <div class="form-group">
-          <label>Category</label>
-          <select>
-            <option value="">Select Category</option>
-            <option value="phone">Phone</option>
-            <option value="laptop">Laptop</option>
-            <option value="tablet">Tablet</option>
-            <option value="accessory">Accessory</option>
-          </select>
+        <div id="specs-container">
+          <div class="spec-row">
+            <input type="text" placeholder="Spec Name (RAM)" />
+            <input type="text" placeholder="Value (8GB)" />
+          </div>
         </div>
 
-        <div class="form-group">
-          <label>Brand</label>
-          <input type="text" placeholder="Enter brand" />
+        <div class="form-group full-width file-group">
+          <label for="product-image">Product Image</label>
+          <input id="product-image" type="file" />
         </div>
 
-        <div class="form-group">
-          <label>Model</label>
-          <input type="text" placeholder="Enter model" />
-        </div>
-      </div>
-
-      <div class="form-group full-width">
-        <label>Product Description</label>
-        <textarea placeholder="Write product description..."></textarea>
-      </div>
-
-      <div class="specs-header">
-        <h3>Specifications</h3>
-        <button onclick="addSpec()" class="btn-secondary-admin" type="button">+ Add Specification</button>
-      </div>
-
-      <div id="specs-container">
-        <div class="spec-row">
-          <input type="text" placeholder="Spec Name (RAM)" />
-          <input type="text" placeholder="Value (8GB)" />
-        </div>
-      </div>
-
-      <div class="form-group full-width file-group">
-        <label>Product Image</label>
-        <input type="file" />
-      </div>
-
-      <button class="btn-primary-admin" type="button">Add Product</button>
+        <button class="btn-primary-admin" type="submit">Add Product</button>
+      </form>
     </section>
 
     <section class="admin-card">
@@ -190,8 +194,12 @@
               <td><span class="status low-stock">Low</span></td>
               <td>
                 <div class="action-buttons">
-                  <button class="icon-btn edit"><i class="fa-solid fa-pen"></i></button>
-                  <button class="icon-btn delete"><i class="fa-solid fa-trash"></i></button>
+                  <button class="icon-btn edit" type="button">
+                    <i class="fa-solid fa-pen"></i>
+                  </button>
+                  <button class="icon-btn delete" type="button">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
                 </div>
               </td>
             </tr>
@@ -208,8 +216,12 @@
               <td><span class="status active">Available</span></td>
               <td>
                 <div class="action-buttons">
-                  <button class="icon-btn edit"><i class="fa-solid fa-pen"></i></button>
-                  <button class="icon-btn delete"><i class="fa-solid fa-trash"></i></button>
+                  <button class="icon-btn edit" type="button">
+                    <i class="fa-solid fa-pen"></i>
+                  </button>
+                  <button class="icon-btn delete" type="button">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
                 </div>
               </td>
             </tr>
@@ -239,7 +251,7 @@
         <h4>Support</h4>
         <ul>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="login.html">Login</a></li>
+          <li><a href="account.html">Account</a></li>
           <li><a href="#">techmatch@university.edu</a></li>
         </ul>
       </div>
