@@ -628,10 +628,11 @@ footer {
     align-items: flex-start;
   }
 }
-.back-btn{
-display:inline-block;
-margin:20px;
-text-decoration:none;
-color:#000;
-font-weight:bold;
+
+.back-btn {
+  display: inline-block;
+  margin: 20px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
 }
