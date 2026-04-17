@@ -558,7 +558,7 @@ footer {
   color: rgba(255, 255, 255, 0.35);
 }
 
-@media(max-width:900px) {
+@media (max-width: 900px) {
   .nav-links {
     display: none;
   }
@@ -576,7 +576,7 @@ footer {
   }
 }
 
-@media(max-width:560px) {
+@media (max-width: 560px) {
   .footer-inner {
     grid-template-columns: 1fr;
   }
