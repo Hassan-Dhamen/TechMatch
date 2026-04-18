@@ -1,46 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Admin Dashboard - TechMatch</title>
+  <title>Admin Dashboard — TechMatch</title>
 
   <link rel="stylesheet" href="../css/index.css" />
   <link rel="stylesheet" href="../css/admin.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Syne:wght@700;800&display=swap"
-    rel="stylesheet"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Syne:wght@700;800&display=swap"
+    rel="stylesheet" />
 </head>
 
 <body>
+
+  <!-- ===== NAVBAR (admin version) ===== -->
   <header>
     <nav class="navbar">
       <a href="../index.html" class="logo">Tech<span>Match</span></a>
 
       <ul class="nav-links">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="product.html">Products</a></li>
-        <li><a href="compare.html">Compare</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="admin.html">Dashboard</a></li>
+        <li><a href="#add-product-section">Add Product</a></li>
+        <li><a href="#products-table">Products</a></li>
       </ul>
 
       <div class="nav-actions">
-        <a href="account.html" class="btn-nav btn-nav-outline">Account</a>
-        <a href="cart.html" class="cart-icon">
-          <i class="fa-solid fa-cart-shopping"></i>
-          <span class="cart-count">2</span>
+        <a href="admin_login.html" class="logout-nav-btn">
+          <i class="fa-solid fa-right-from-bracket"></i> Logout
         </a>
       </div>
     </nav>
   </header>
 
+  <!-- ===== HERO ===== -->
   <section class="page-hero">
     <div class="page-hero-content">
       <span class="page-eyebrow"><span></span> Control Center</span>
@@ -53,66 +47,64 @@
   </section>
 
   <main class="admin-container">
-    <section class="stats-grid">
-      <article class="stat-box">
+
+    <div class="stats-grid">
+
+      <a href="#customers-section" class="stat-box">
         <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
         <div>
-          <h3>Users</h3>
-          <p>120</p>
+          <h3>Customers</h3>
+          <p>0</p>
         </div>
-      </article>
+      </a>
 
-      <article class="stat-box">
+      <a href="#orders-section" class="stat-box">
         <div class="stat-icon"><i class="fa-solid fa-cart-shopping"></i></div>
         <div>
           <h3>Orders</h3>
-          <p>45</p>
+          <p>0</p>
         </div>
-      </article>
+      </a>
 
-      <article class="stat-box">
+      <a href="#products-table" class="stat-box">
         <div class="stat-icon"><i class="fa-solid fa-box"></i></div>
         <div>
           <h3>Products</h3>
-          <p>32</p>
+          <p>8</p>
         </div>
-      </article>
+      </a>
 
-      <article class="stat-box">
+      <a href="#rating-section" class="stat-box">
         <div class="stat-icon"><i class="fa-solid fa-star"></i></div>
         <div>
           <h3>Avg Rating</h3>
           <p>4.8</p>
         </div>
-      </article>
-    </section>
+      </a>
 
-    <section class="admin-card">
+    </div>
+
+    <section class="admin-card" id="add-product-section">
       <div class="card-title">
-        <h2><i class="fa-solid fa-plus"></i> Add Product</h2>
-        <p>Fill in the product details to add a new item.</p>
+        <h2><i class="fa-solid fa-plus"></i> Add New Product</h2>
+        <p>Fill in the product details to add a new item to the store.</p>
       </div>
 
-      <form id="admin-product-form">
+      <form action="admin.html" method="post" enctype="multipart/form-data">
         <div class="form-grid">
           <div class="form-group">
             <label for="product-name">Product Name</label>
-            <input id="product-name" type="text" placeholder="Enter product name" />
+            <input id="product-name" name="name" type="text" placeholder="Enter product name" required minlength="3" />
           </div>
 
           <div class="form-group">
-            <label for="product-price">Price</label>
-            <input id="product-price" type="number" placeholder="Enter price" />
-          </div>
-
-          <div class="form-group">
-            <label for="product-stock">Stock</label>
-            <input id="product-stock" type="number" placeholder="Enter stock" />
+            <label for="product-brand">Brand</label>
+            <input id="product-brand" name="brand" type="text" placeholder="Apple, Samsung, Sony..." required />
           </div>
 
           <div class="form-group">
             <label for="product-category">Category</label>
-            <select id="product-category">
+            <select id="product-category" name="category" required>
               <option value="">Select Category</option>
               <option value="phone">Phone</option>
               <option value="laptop">Laptop</option>
@@ -122,147 +114,362 @@
           </div>
 
           <div class="form-group">
-            <label for="product-brand">Brand</label>
-            <input id="product-brand" type="text" placeholder="Enter brand" />
+            <label for="product-price">Price (⃁)</label>
+            <input id="product-price" name="price" type="number" min="1" step="0.01" placeholder="0.00" required />
           </div>
 
           <div class="form-group">
-            <label for="product-model">Model</label>
-            <input id="product-model" type="text" placeholder="Enter model" />
+            <label for="product-stock">Stock Quantity</label>
+            <input id="product-stock" name="stock" type="number" min="1" placeholder="0" required />
+          </div>
+
+          <div class="form-group">
+            <label for="product-rating">Initial Rating</label>
+            <input id="product-rating" name="rating" type="number" min="0" max="5" step="0.1" placeholder="0.0" />
           </div>
         </div>
 
         <div class="form-group full-width">
           <label for="product-description">Product Description</label>
-          <textarea id="product-description" placeholder="Write product description..."></textarea>
-        </div>
-
-        <div class="specs-header">
-          <h3>Specifications</h3>
-          <button onclick="addSpec()" class="btn-secondary-admin" type="button">
-            + Add Specification
-          </button>
-        </div>
-
-        <div id="specs-container">
-          <div class="spec-row">
-            <input type="text" placeholder="Spec Name (RAM)" />
-            <input type="text" placeholder="Value (8GB)" />
-          </div>
+          <textarea id="product-description" name="description" placeholder="Write a product description..."
+            required></textarea>
         </div>
 
         <div class="form-group full-width file-group">
-          <label for="product-image">Product Image</label>
-          <input id="product-image" type="file" />
+          <label for="product-image">
+            <i class="fa-solid fa-image"></i> Product Image (stored as file name in DB)
+          </label>
+          <input id="product-image" name="picture" type="file" accept="image/png, image/jpeg, image/webp" required />
+          <small style="color:var(--gray-600); font-size:0.8rem; margin-top:4px; display:block;">
+            Accepted formats: PNG, JPEG, WEBP. Max size 5MB.
+          </small>
         </div>
 
-        <button class="btn-primary-admin" type="submit">Add Product</button>
+        <div class="form-actions-row">
+          <button class="btn-primary-admin" type="submit">
+            <i class="fa-solid fa-plus"></i> Add Product
+          </button>
+          <button class="btn-secondary-admin" type="reset">
+            <i class="fa-solid fa-rotate-left"></i> Reset
+          </button>
+        </div>
       </form>
     </section>
 
-    <section class="admin-card">
+    <section class="admin-card" id="products-table">
       <div class="card-title">
-        <h2><i class="fa-solid fa-box-open"></i> Products</h2>
-        <p>Manage and review current store inventory.</p>
+        <h2><i class="fa-solid fa-box-open"></i> Manage Products</h2>
+        <p>Search, edit, and remove products from the store inventory.</p>
       </div>
 
+      <form action="admin.html" method="get" class="search-bar">
+        <div class="input-wrap">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" name="q" placeholder="Search products by name or brand..." aria-label="Search products" />
+        </div>
+        <select name="category" aria-label="Filter by category">
+          <option value="">All Categories</option>
+          <option value="phone">Phones</option>
+          <option value="laptop">Laptops</option>
+          <option value="tablet">Tablets</option>
+          <option value="accessory">Accessories</option>
+        </select>
+        <button type="submit" class="btn-search">
+          <i class="fa-solid fa-magnifying-glass"></i> Search
+        </button>
+      </form>
+
+      <!-- Products Table -->
       <div class="table-wrap">
         <table>
           <thead>
             <tr>
               <th>Image</th>
               <th>Name</th>
+              <th>Brand</th>
               <th>Category</th>
               <th>Price</th>
               <th>Stock</th>
-              <th>Rating</th>
               <th>Status</th>
               <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="../images/products/iphone15.jpg" alt="iPhone 15 Pro" class="product-thumb" /></td>
+              <td>iPhone 15 Pro</td>
+              <td>Apple</td>
+              <td>Phone</td>
+              <td>⃁4,299</td>
+              <td>20</td>
+              <td><span class="status active">Available</span></td>
+              <td>
+                <div class="action-buttons">
+                  <a href="admin_modify.html" class="icon-btn edit" title="Edit product">
+                    <i class="fa-solid fa-pen"></i>
+                  </a>
+                  <a href="admin.html" class="icon-btn delete" title="Delete product">
+                    <i class="fa-solid fa-trash"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td><img src="../images/products/macpro.jpg" alt="MacBook Pro 14" class="product-thumb" /></td>
+              <td>MacBook Pro 14</td>
+              <td>Apple</td>
+              <td>Laptop</td>
+              <td>⃁7,499</td>
+              <td>15</td>
+              <td><span class="status active">Available</span></td>
+              <td>
+                <div class="action-buttons">
+                  <a href="admin_modify.html" class="icon-btn edit" title="Edit product">
+                    <i class="fa-solid fa-pen"></i>
+                  </a>
+                  <a href="admin.html" class="icon-btn delete" title="Delete product">
+                    <i class="fa-solid fa-trash"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td><img src="../images/products/s24u.jpg" alt="Samsung S24 Ultra" class="product-thumb" /></td>
+              <td>Samsung Galaxy S24 Ultra</td>
+              <td>Samsung</td>
+              <td>Phone</td>
+              <td>⃁4,899</td>
+              <td>10</td>
+              <td><span class="status active">Available</span></td>
+              <td>
+                <div class="action-buttons">
+                  <a href="admin_modify.html" class="icon-btn edit" title="Edit product">
+                    <i class="fa-solid fa-pen"></i>
+                  </a>
+                  <a href="admin.html" class="icon-btn delete" title="Delete product">
+                    <i class="fa-solid fa-trash"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td><img src="../images/products/sonyh.jpg" alt="Sony WH-1000XM5" class="product-thumb" /></td>
+              <td>Sony WH-1000XM5</td>
+              <td>Sony</td>
+              <td>Accessory</td>
+              <td>⃁1,250</td>
+              <td>30</td>
+              <td><span class="status active">Available</span></td>
+              <td>
+                <div class="action-buttons">
+                  <a href="admin_modify.html" class="icon-btn edit" title="Edit product">
+                    <i class="fa-solid fa-pen"></i>
+                  </a>
+                  <a href="admin.html" class="icon-btn delete" title="Delete product">
+                    <i class="fa-solid fa-trash"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td><img src="../images/products/dellxps.jpg" alt="Dell XPS 13" class="product-thumb" /></td>
+              <td>Dell XPS 13</td>
+              <td>Dell</td>
+              <td>Laptop</td>
+              <td>⃁5,400</td>
+              <td>8</td>
+              <td><span class="status low-stock">Low Stock</span></td>
+              <td>
+                <div class="action-buttons">
+                  <a href="admin_modify.html" class="icon-btn edit" title="Edit product">
+                    <i class="fa-solid fa-pen"></i>
+                  </a>
+                  <a href="admin.html" class="icon-btn delete" title="Delete product">
+                    <i class="fa-solid fa-trash"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td><img src="../images/products/ipadair.jpg" alt="iPad Air M2" class="product-thumb" /></td>
+              <td>iPad Air M2</td>
+              <td>Apple</td>
+              <td>Tablet</td>
+              <td>⃁2,699</td>
+              <td>12</td>
+              <td><span class="status active">Available</span></td>
+              <td>
+                <div class="action-buttons">
+                  <a href="admin_modify.html" class="icon-btn edit" title="Edit product">
+                    <i class="fa-solid fa-pen"></i>
+                  </a>
+                  <a href="admin.html" class="icon-btn delete" title="Delete product">
+                    <i class="fa-solid fa-trash"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td><img src="../images/products/airpods.jpg" alt="AirPods Pro" class="product-thumb" /></td>
+              <td>AirPods Pro (2nd Gen)</td>
+              <td>Apple</td>
+              <td>Accessory</td>
+              <td>⃁940</td>
+              <td>40</td>
+              <td><span class="status active">Available</span></td>
+              <td>
+                <div class="action-buttons">
+                  <a href="admin_modify.html" class="icon-btn edit" title="Edit product">
+                    <i class="fa-solid fa-pen"></i>
+                  </a>
+                  <a href="admin.html" class="icon-btn delete" title="Delete product">
+                    <i class="fa-solid fa-trash"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td><img src="../images/products/hpspectre.jpg" alt="HP Spectre x360" class="product-thumb" /></td>
+              <td>HP Spectre x360</td>
+              <td>HP</td>
+              <td>Laptop</td>
+              <td>⃁4,900</td>
+              <td>7</td>
+              <td><span class="status low-stock">Low Stock</span></td>
+              <td>
+                <div class="action-buttons">
+                  <a href="admin_modify.html" class="icon-btn edit" title="Edit product">
+                    <i class="fa-solid fa-pen"></i>
+                  </a>
+                  <a href="admin.html" class="icon-btn delete" title="Delete product">
+                    <i class="fa-solid fa-trash"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section id="orders-section" class="admin-card">
+      <div class="card-title">
+        <h2><i class="fa-solid fa-cart-shopping"></i> Orders</h2>
+        <p>List of customer orders (static demo).</p>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Customer</th>
+              <th>Total</th>
+              <th>Status</th>
             </tr>
           </thead>
 
           <tbody>
             <tr>
-              <td>
-                <img src="../images/products/iphone15.jpg" alt="iPhone 15" class="product-thumb" />
-              </td>
-              <td>iPhone 15</td>
-              <td>Phone</td>
-              <td>$999</td>
-              <td>5</td>
-              <td>⭐ 4.9</td>
-              <td><span class="status low-stock">Low</span></td>
-              <td>
-                <div class="action-buttons">
-                  <button class="icon-btn edit" type="button">
-                    <i class="fa-solid fa-pen"></i>
-                  </button>
-                  <button class="icon-btn delete" type="button">
-                    <i class="fa-solid fa-trash"></i>
-                  </button>
-                </div>
-              </td>
+              <td>#1001</td>
+              <td>Guest</td>
+              <td>⃁4,299</td>
+              <td><span class="status active">Completed</span></td>
             </tr>
 
             <tr>
-              <td>
-                <img src="../images/products/macbook.jpg" alt="MacBook" class="product-thumb" />
-              </td>
-              <td>MacBook Air</td>
-              <td>Laptop</td>
-              <td>$1299</td>
-              <td>12</td>
-              <td>⭐ 4.8</td>
-              <td><span class="status active">Available</span></td>
-              <td>
-                <div class="action-buttons">
-                  <button class="icon-btn edit" type="button">
-                    <i class="fa-solid fa-pen"></i>
-                  </button>
-                  <button class="icon-btn delete" type="button">
-                    <i class="fa-solid fa-trash"></i>
-                  </button>
-                </div>
-              </td>
+              <td>#1002</td>
+              <td>Guest</td>
+              <td>⃁940</td>
+              <td><span class="status active">Completed</span></td>
             </tr>
           </tbody>
         </table>
       </div>
     </section>
-  </main>
 
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <div class="logo-footer">Tech<span>Match</span></div>
-        <p>Your destination for modern electronics and smart shopping.</p>
+    <section id="customers-section" class="admin-card">
+      <div class="card-title">
+        <h2><i class="fa-solid fa-users"></i> Customers</h2>
+        <p>Registered customers (static demo).</p>
       </div>
 
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="product.html">Products</a></li>
-          <li><a href="admin.html">Admin</a></li>
-        </ul>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Guest User</td>
+              <td>guest@email.com</td>
+            </tr>
+
+            <tr>
+              <td>Test User</td>
+              <td>test@email.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="rating-section" class="admin-card">
+      <div class="card-title">
+        <h2><i class="fa-solid fa-star"></i> Ratings</h2>
+        <p>Customer ratings overview.</p>
       </div>
 
-      <div class="footer-col">
-        <h4>Support</h4>
-        <ul>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="account.html">Account</a></li>
-          <li><a href="#">techmatch@university.edu</a></li>
-        </ul>
+      <p class="rating-text">
+        Average Rating: ⭐ 4.8 / 5
+      </p>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="logo-footer">Tech<span>Match</span></div>
+          <p>Your destination for modern electronics and smart shopping.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Admin Panel</h4>
+          <ul>
+            <li><a href="admin.html">Dashboard</a></li>
+            <li><a href="#add-product-section">Add Product</a></li>
+            <li><a href="#products-table">Manage Products</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Store</h4>
+          <ul>
+            <li><a href="../index.html">Storefront</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="admin_login.html">Logout</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
 
-    <div class="footer-bottom">
-      <p>&copy; 2026 TechMatch. All rights reserved.</p>
-      <p>Designed for Web Application Project</p>
-    </div>
-  </footer>
+      <div class="footer-bottom">
+        <p>&copy; 2026 TechMatch. All rights reserved.</p>
+        <p>Designed for Web Application Project</p>
+      </div>
+    </footer>
 
-  <script src="../js/admin.js"></script>
+
 </body>
+
 </html>
