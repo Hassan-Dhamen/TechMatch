@@ -1,13 +1,13 @@
 # TechMatch — Smart Electronics Store
 
 CIS 423: Web-based Systems — Milestone 2  
-Group 9MS02 · BB Group #4 · Term 2 (2025–2026)
+Group 8MS02 · BB Group #4 · Term 2 (2025–2026)
 
 ---
 
 ## 📌 Project Overview
 
-TechMatch is a smart electronics e-commerce website that allows users to browse, explore, and purchase devices.
+TechMatch is a smart electronics e-commerce website that allows users to browse, explore, and purchase devices
 
 The system focuses on simplicity, usability, and a structured shopping experience.
 
@@ -43,12 +43,14 @@ The system focuses on simplicity, usability, and a structured shopping experienc
 
 ## 👥 Team Members
 
-- Hassan Al-Dhamen – UI/UX & Filtering
-- Hussain – Product Interaction
-- Abdullah – Cart System
-- Mohammed – Admin Panel
-- Mirza – Database & ERD
+- Mohammed Abdullah AlKhalifah — Database & Admin  
+- Mirza Mahdi — Products & UI  
+- Hassan AlDhamen — Cart & Checkout  
+- Hussain Alromaih — Contact & Login  
+- Abdullah AlMashar — Styling & Integration  
+
 ---
+
 
 ## 📂 Project Structure
 techmatch/
