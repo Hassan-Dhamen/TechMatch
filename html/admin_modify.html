@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modify Product — Admin — TechMatch</title>
+
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/admin.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Syne:wght@700;800&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header>
+    <nav class="navbar">
+      <a href="../index.html" class="logo">Tech<span>Match</span></a>
+
+      <ul class="nav-links">
+        <li><a href="admin.html">Dashboard</a></li>
+        <li><a href="admin.html#add-product-section">Add Product</a></li>
+        <li><a href="admin.html#products-table">Products</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="admin_login.html" class="logout-nav-btn">
+          <i class="fa-solid fa-right-from-bracket"></i> Logout
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <span class="page-eyebrow"><span></span> Edit Mode</span>
+      <h1>Modify <em>Product</em></h1>
+      <p>
+        Update the product information below. Changes will be saved to the
+        database and reflected in the store immediately.
+      </p>
+    </div>
+  </section>
+
+  <main class="admin-container">
+
+    <a href="admin.html" class="admin-back-link">
+      <i class="fa-solid fa-arrow-left"></i> Back to Products
+    </a>
+
+    <!-- Modify product card -->
+    <section class="admin-card">
+      <div class="card-title">
+        <h2><i class="fa-solid fa-pen"></i> Edit Product Details</h2>
+        <p>Editing: <strong>iPhone 15 Pro</strong> (Product ID: #2)</p>
+      </div>
+
+      <form action="admin.html" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="product_id" value="2" />
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="m-name">Product Name</label>
+            <input id="m-name" name="name" type="text" value="iPhone 15 Pro" required />
+          </div>
+
+          <div class="form-group">
+            <label for="m-brand">Brand</label>
+            <input id="m-brand" name="brand" type="text" value="Apple" required />
+          </div>
+
+          <div class="form-group">
+            <label for="m-category">Category</label>
+            <select id="m-category" name="category" required>
+              <option value="phone" selected>Phone</option>
+              <option value="laptop">Laptop</option>
+              <option value="tablet">Tablet</option>
+              <option value="accessory">Accessory</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="m-price">Price (⃁)</label>
+            <input id="m-price" name="price" type="number" min="0" step="0.01" value="4299.00" required />
+          </div>
+
+          <div class="form-group">
+            <label for="m-stock">Stock Quantity</label>
+            <input id="m-stock" name="stock" type="number" min="0" value="20" required />
+          </div>
+
+          <div class="form-group">
+            <label for="m-rating">Rating</label>
+            <input id="m-rating" name="rating" type="number" min="0" max="5" step="0.1" value="4.8" />
+          </div>
+        </div>
+
+        <div class="form-group full-width">
+          <label for="m-description">Product Description</label>
+          <textarea id="m-description" name="description"
+            required>Natural Titanium, Super Retina XDR Display, A17 Pro chip with 6-core GPU, Pro camera system with 48MP main, 5x telephoto zoom, USB-C.</textarea>
+        </div>
+
+        <div class="form-group full-width">
+          <label>Current Product Image</label>
+          <div class="current-image-wrap">
+            <img src="../images/products/iphone15.jpg" alt="Current image of iPhone 15 Pro" />
+            <div class="img-meta">
+              <strong>iphone15.jpg</strong>
+              <span>Stored as file name in the database</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group full-width file-group">
+          <label for="m-image">
+            <i class="fa-solid fa-upload"></i> Replace Product Image (Optional)
+          </label>
+          <input id="m-image" name="picture" type="file" accept="image/png, image/jpeg, image/webp" />
+          <small style="color:var(--gray-600); font-size:0.8rem; margin-top:4px; display:block;">
+            Leave empty to keep the current image. Accepted formats: PNG, JPEG, WEBP.
+          </small>
+        </div>
+
+        <div class="form-actions-row">
+          <button class="btn-primary-admin" type="submit">
+<i class="fa-solid fa-floppy-disk"></i> Save Changes
+          </button>
+          <a href="admin.html" class="btn-secondary-admin" style="text-decoration:none;">
+<i class="fa-solid fa-arrow-left"></i> Cancel          </a>
+        </div>
+      </form>
+    </section>
+
+    <section class="admin-card">
+      <div class="card-title">
+        <h2 class="danger-title"><i class="fa-solid fa-triangle-exclamation"></i> Danger Zone</h2>
+        <p>Deleting a product will remove it permanently from the store.</p>
+      </div>
+
+      <div class="delete-notice">
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <p>
+          This action cannot be undone. All references to this product in past
+          orders will be preserved for record-keeping purposes.
+        </p>
+      </div>
+
+      <form action="admin.html" method="post">
+        <input type="hidden" name="product_id" value="2" />
+        <input type="hidden" name="action" value="delete" />
+        <button type="submit" class="btn-primary-admin btn-danger">
+          <i class="fa-solid fa-trash"></i> Delete This Product
+        </button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-footer">Tech<span>Match</span></div>
+        <p>Your destination for modern electronics and smart shopping.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Admin Panel</h4>
+        <ul>
+          <li><a href="admin.html">Dashboard</a></li>
+          <li><a href="admin.html#add-product-section">Add Product</a></li>
+          <li><a href="admin.html#products-table">Manage Products</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Store</h4>
+        <ul>
+          <li><a href="../index.html">Storefront</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="admin_login.html">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 TechMatch. All rights reserved.</p>
+      <p>Designed for Web Application Project</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
