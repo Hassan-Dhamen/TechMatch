@@ -7,7 +7,7 @@ Group 9MS02 · BB Group #4 · Term 2 (2025–2026)
 
 ## 📌 Project Overview
 
-TechMatch is a smart electronics e-commerce website that allows users to browse, explore, and purchase devices بسهولة من خلال واجهة حديثة ونظيفة.
+TechMatch is a smart electronics e-commerce website that allows users to browse, explore, and purchase devices.
 
 The system focuses on simplicity, usability, and a structured shopping experience.
 
