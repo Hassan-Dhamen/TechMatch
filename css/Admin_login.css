@@ -157,7 +157,7 @@
   position: relative;
 }
 
-.input-with-icon > i {
+.input-with-icon>i {
   position: absolute;
   left: 16px;
   top: 50%;
@@ -196,7 +196,7 @@
   box-shadow: 0 0 0 4px rgba(10, 10, 10, 0.06);
 }
 
-.input-with-icon:focus-within > i {
+.input-with-icon:focus-within>i {
   color: var(--black);
 }
 
